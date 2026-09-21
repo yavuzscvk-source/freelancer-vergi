@@ -1,35 +1,39 @@
 import Link from "next/link";
 
+const ARACLAR = [
+  { href: "/serbest-meslek-makbuzu", baslik: "Serbest meslek makbuzu hesaplama", aciklama: "Brüt veya net tutardan stopaj, KDV ve tahsil edilecek tutar." },
+  { href: "/gelir-vergisi-hesaplama", baslik: "Gelir vergisi hesaplama 2026", aciklama: "Yıllık kazancınızın vergisi, dilim dilim ve stopaj mahsubuyla." },
+  { href: "/genc-girisimci-istisnasi", baslik: "Genç girişimci istisnası 2026", aciklama: "400.000 TL istisnayla ödeyeceğiniz vergi ve avantajınız." },
+  { href: "/sahis-mi-limited-mi", baslik: "Şahıs şirketi mi limited mi?", aciklama: "Kârınıza göre iki şirket türünün toplam vergi yükü." },
+];
+
 export default function Home() {
   return (
     <>
-      <h1>Freelancer Vergi Hesaplama Araçları</h1>
-      <p>Serbest çalışanlar, yazılımcılar, tasarımcılar ve içerik üreticileri için sade ve ücretsiz vergi hesaplayıcıları.</p>
+      <h1>Freelancer vergi hesaplama araçları</h1>
+      <p className="lead">Serbest çalışanlar için 2026 oranlarıyla, sade ve ücretsiz hesaplayıcılar. Makbuzunuzu kesmeden önce elinize ne geçeceğini görün.</p>
 
-      <Link href="/serbest-meslek-makbuzu" className="card tool-link">
-        <strong>Serbest Meslek Makbuzu Hesaplama</strong>
-        <div className="muted">Brüt veya net tutardan stopaj, KDV ve tahsil edilecek tutarı hesaplayın.</div>
-      </Link>
-
-      <Link href="/gelir-vergisi-hesaplama" className="card tool-link">
-        <strong>Gelir Vergisi Hesaplama 2026</strong>
-        <div className="muted">Yıllık kazancınızın vergisini dilim dilim ve stopaj mahsubuyla hesaplayın.</div>
-      </Link>
-
-      <Link href="/genc-girisimci-istisnasi" className="card tool-link">
-        <strong>Genç Girişimci İstisnası Hesaplama 2026</strong>
-        <div className="muted">400.000 TL istisnayla ödeyeceğiniz vergiyi ve avantajınızı görün.</div>
-      </Link>
-
-      <Link href="/sahis-mi-limited-mi" className="card tool-link">
-        <strong>Şahıs Şirketi mi Limited mi?</strong>
-        <div className="muted">Kârınıza göre iki şirket türünün toplam vergi yükünü karşılaştırın.</div>
-      </Link>
-
-      <div className="card">
-        <strong>Yakında</strong>
-        <div className="muted">KDV hesaplama</div>
+      <div className="results">
+        <strong>Örnek: 10.000 TL'lik serbest meslek makbuzu</strong>
+        <div className="row"><span>Brüt tutar</span><span>10.000,00 TL</span></div>
+        <div className="row"><span>Stopaj (%20)</span><span>-2.000,00 TL</span></div>
+        <div className="row"><span>KDV (%20)</span><span>+2.000,00 TL</span></div>
+        <div className="row total"><span>Tahsil edilecek</span><span>10.000,00 TL</span></div>
       </div>
+      <Link href="/serbest-meslek-makbuzu" className="btn">Kendi tutarınızı hesaplayın</Link>
+
+      <h2>Tüm araçlar</h2>
+      <ul className="tools">
+        {ARACLAR.map((a) => (
+          <li key={a.href}>
+            <Link href={a.href}>
+              <strong>{a.baslik}</strong>
+              <span>{a.aciklama}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <p className="muted">Yakında: KDV hesaplama</p>
     </>
   );
 }
