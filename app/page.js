@@ -5,6 +5,7 @@ const ARACLAR = [
   { href: "/gelir-vergisi-hesaplama", baslik: "Gelir vergisi hesaplama 2026", aciklama: "Yıllık kazancınızın vergisi, dilim dilim ve stopaj mahsubuyla." },
   { href: "/genc-girisimci-istisnasi", baslik: "Genç girişimci istisnası 2026", aciklama: "400.000 TL istisnayla ödeyeceğiniz vergi ve avantajınız." },
   { href: "/sahis-mi-limited-mi", baslik: "Şahıs şirketi mi limited mi?", aciklama: "Kârınıza göre iki şirket türünün toplam vergi yükü." },
+  { href: "/kdv-hesaplama", baslik: "KDV hesaplama", aciklama: "KDV ekleyin veya KDV dahil tutardan ayırın. %1, %10, %20." },
 ];
 
 export default function Home() {
@@ -33,7 +34,6 @@ export default function Home() {
           </li>
         ))}
       </ul>
-      <p className="muted">Yakında: KDV hesaplama</p>
     </>
   );
 }
