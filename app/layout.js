@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
             Bu sitedeki hesaplamalar bilgilendirme amaçlıdır. Kesin sonuç için mali müşavirinize danışın.
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
