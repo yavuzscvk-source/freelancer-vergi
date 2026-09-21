@@ -11,9 +11,14 @@ export default function Home() {
         <div className="muted">Brüt veya net tutardan stopaj, KDV ve tahsil edilecek tutarı hesaplayın.</div>
       </Link>
 
+      <Link href="/gelir-vergisi-hesaplama" className="card tool-link">
+        <strong>Gelir Vergisi Hesaplama 2026</strong>
+        <div className="muted">Yıllık kazancınızın vergisini dilim dilim ve stopaj mahsubuyla hesaplayın.</div>
+      </Link>
+
       <div className="card">
         <strong>Yakında</strong>
-        <div className="muted">Gelir vergisi dilimi hesaplama, genç girişimci istisnası hesaplama</div>
+        <div className="muted">Genç girişimci istisnası hesaplama, şahıs şirketi mi limited mi?</div>
       </div>
     </>
   );
