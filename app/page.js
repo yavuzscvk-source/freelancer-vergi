@@ -6,6 +6,8 @@ const ARACLAR = [
   { href: "/genc-girisimci-istisnasi", baslik: "Genç girişimci istisnası 2026", aciklama: "400.000 TL istisnayla ödeyeceğiniz vergi ve avantajınız." },
   { href: "/sahis-mi-limited-mi", baslik: "Şahıs şirketi mi limited mi?", aciklama: "Kârınıza göre iki şirket türünün toplam vergi yükü." },
   { href: "/kdv-hesaplama", baslik: "KDV hesaplama", aciklama: "KDV ekleyin veya KDV dahil tutardan ayırın. %1, %10, %20." },
+  { href: "/hizmet-ihracati-vergi-indirimi", baslik: "Yurt dışına hizmet: %100 vergi indirimi", aciklama: "2026'da yazılım, tasarım ve mühendislik ihracatında kazanç indirimi." },
+
 ];
 
 export default function Home() {
