@@ -7,5 +7,8 @@ export default function sitemap() {
     { url: `${SITE_URL}/gelir-vergisi-hesaplama`, lastModified: new Date() },
     { url: `${SITE_URL}/genc-girisimci-istisnasi`, lastModified: new Date() },
     { url: `${SITE_URL}/sahis-mi-limited-mi`, lastModified: new Date() },
+    { url: `${SITE_URL}/hakkinda`, lastModified: new Date() },
+    { url: `${SITE_URL}/iletisim`, lastModified: new Date() },
+    { url: `${SITE_URL}/gizlilik-politikasi`, lastModified: new Date() },
   ];
 }
