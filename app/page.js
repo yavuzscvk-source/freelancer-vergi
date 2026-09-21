@@ -21,9 +21,14 @@ export default function Home() {
         <div className="muted">400.000 TL istisnayla ödeyeceğiniz vergiyi ve avantajınızı görün.</div>
       </Link>
 
+      <Link href="/sahis-mi-limited-mi" className="card tool-link">
+        <strong>Şahıs Şirketi mi Limited mi?</strong>
+        <div className="muted">Kârınıza göre iki şirket türünün toplam vergi yükünü karşılaştırın.</div>
+      </Link>
+
       <div className="card">
         <strong>Yakında</strong>
-        <div className="muted">Şahıs şirketi mi limited mi?, KDV hesaplama</div>
+        <div className="muted">KDV hesaplama</div>
       </div>
     </>
   );
