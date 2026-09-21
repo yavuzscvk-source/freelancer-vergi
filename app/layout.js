@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SITE_URL } from "../lib/site";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -10,11 +11,17 @@ const manrope = Manrope({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Freelancer Vergi Hesaplama",
     template: "%s | Freelancer Vergi",
   },
   description: "Serbest çalışanlar için vergi hesaplama araçları.",
+  openGraph: {
+    siteName: "Freelancer Vergi",
+    locale: "tr_TR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
