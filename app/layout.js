@@ -1,6 +1,13 @@
 import Link from "next/link";
+import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+
+const manrope = Manrope({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata = {
   title: {
@@ -12,11 +19,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="tr">
+    <html lang="tr" className={manrope.variable}>
       <body>
         <header className="header">
           <div className="header-inner">
-            <Link href="/" className="logo">Freelancer Vergi</Link>
+            <Link href="/" className="logo">
+              <span className="logo-mark">₺</span>
+              Freelancer Vergi
+            </Link>
           </div>
         </header>
         <main className="container">{children}</main>
