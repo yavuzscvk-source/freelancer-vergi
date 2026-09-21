@@ -16,9 +16,14 @@ export default function Home() {
         <div className="muted">Yıllık kazancınızın vergisini dilim dilim ve stopaj mahsubuyla hesaplayın.</div>
       </Link>
 
+      <Link href="/genc-girisimci-istisnasi" className="card tool-link">
+        <strong>Genç Girişimci İstisnası Hesaplama 2026</strong>
+        <div className="muted">400.000 TL istisnayla ödeyeceğiniz vergiyi ve avantajınızı görün.</div>
+      </Link>
+
       <div className="card">
         <strong>Yakında</strong>
-        <div className="muted">Genç girişimci istisnası hesaplama, şahıs şirketi mi limited mi?</div>
+        <div className="muted">Şahıs şirketi mi limited mi?, KDV hesaplama</div>
       </div>
     </>
   );
