@@ -1,9 +1,13 @@
 import Link from "next/link";
+import { sayfa } from "../../lib/seo";
 
-export const metadata = {
-  title: "Gizlilik Politikası",
-  description: "Freelancer Vergi gizlilik politikası: hangi verilerin toplandığı ve nasıl kullanıldığı.",
-};
+export const metadata = sayfa({
+  baslik: "Gizlilik Politikası",
+  aciklama: "Freelancer Vergi gizlilik politikası: hangi verilerin toplandığı ve nasıl kullanıldığı.",
+  yol: "/gizlilik-politikasi",
+});
+
+
 
 export default function Gizlilik() {
   return (
