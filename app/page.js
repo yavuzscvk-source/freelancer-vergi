@@ -1,4 +1,12 @@
 import Link from "next/link";
+import { sayfa } from "../lib/seo";
+
+export const metadata = sayfa({
+  baslik: "Freelancer Vergi Hesaplama Araçları 2026",
+  aciklama: "Serbest çalışanlar için ücretsiz vergi hesaplayıcıları: serbest meslek makbuzu, gelir vergisi, genç girişimci istisnası, KDV, şahıs mı limited mi ve yurt dışı hizmet indirimi.",
+  yol: "/",
+  mutlak: true,
+});
 
 const ARACLAR = [
   { href: "/serbest-meslek-makbuzu", baslik: "Serbest meslek makbuzu hesaplama", aciklama: "Brüt veya net tutardan stopaj, KDV ve tahsil edilecek tutar." },
@@ -7,8 +15,8 @@ const ARACLAR = [
   { href: "/sahis-mi-limited-mi", baslik: "Şahıs şirketi mi limited mi?", aciklama: "Kârınıza göre iki şirket türünün toplam vergi yükü." },
   { href: "/kdv-hesaplama", baslik: "KDV hesaplama", aciklama: "KDV ekleyin veya KDV dahil tutardan ayırın. %1, %10, %20." },
   { href: "/hizmet-ihracati-vergi-indirimi", baslik: "Yurt dışına hizmet: %100 vergi indirimi", aciklama: "2026'da yazılım, tasarım ve mühendislik ihracatında kazanç indirimi." },
-
 ];
+
 
 export default function Home() {
   return (
