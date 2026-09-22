@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
+import { sayfa } from "../../lib/seo";
 
-export const metadata = {
-  title: "Yurt Dışına Hizmet Veren Freelancer Vergisi 2026 (%100 İndirim)",
-  description: "2026'da yurt dışı müşterilere verilen yazılım, tasarım ve mühendislik hizmetlerinde kazanç indirimi %100 oldu. Şartları okuyun, vergi avantajınızı hesaplayın.",
-};
+export const metadata = sayfa({
+  baslik: "Yurt Dışına Hizmet Veren Freelancer Vergisi 2026 (%100 İndirim)",
+  aciklama: "2026'da yurt dışı müşterilere verilen yazılım, tasarım ve mühendislik hizmetlerinde kazanç indirimi %100 oldu. Şartları okuyun, vergi avantajınızı hesaplayın.",
+  yol: "/hizmet-ihracati-vergi-indirimi",
+});
+
+
 
 export default function HizmetIhracati() {
   return (
