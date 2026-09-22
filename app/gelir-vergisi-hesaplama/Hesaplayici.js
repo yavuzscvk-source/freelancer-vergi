@@ -1,50 +1,19 @@
 "use client";
 
 import { useState } from "react";
-
-// 2026 ücret dışı gelirler tarifesi (GVK md. 103)
-const DILIMLER = [
-  { ust: 190000, oran: 0.15 },
-  { ust: 400000, oran: 0.2 },
-  { ust: 1000000, oran: 0.27 },
-  { ust: 5300000, oran: 0.35 },
-  { ust: Infinity, oran: 0.4 },
-];
-
-function sayiyaCevir(metin) {
-  const temiz = metin.replace(/\./g, "").replace(",", ".").trim();
-  const sayi = parseFloat(temiz);
-  return isNaN(sayi) || sayi < 0 ? 0 : sayi;
-}
-
-function tl(sayi) {
-  return sayi.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
-}
-
-function vergiHesapla(matrah) {
-  let alt = 0;
-  let toplam = 0;
-  const detay = [];
-  for (const d of DILIMLER) {
-    if (matrah <= alt) break;
-    const tutar = Math.min(matrah, d.ust) - alt;
-    const vergi = tutar * d.oran;
-    detay.push({ oran: d.oran, tutar, vergi });
-    toplam += vergi;
-    alt = d.ust;
-  }
-  return { toplam, detay };
-}
+import { gelirVergisiHesapla } from "../../lib/vergi";
+import { sayiyaCevir, tl, yuzde, oranYazi } from "../../lib/format";
 
 export default function Hesaplayici() {
   const [gelir, setGelir] = useState("600.000");
   const [gider, setGider] = useState("100.000");
   const [stopaj, setStopaj] = useState("0");
+  const [gecici, setGecici] = useState("0");
 
   const matrah = Math.max(0, sayiyaCevir(gelir) - sayiyaCevir(gider));
-  const { toplam, detay } = vergiHesapla(matrah);
-  const kesilen = sayiyaCevir(stopaj);
-  const fark = toplam - kesilen;
+  const { toplam, detay } = gelirVergisiHesapla(matrah);
+  const mahsup = sayiyaCevir(stopaj) + sayiyaCevir(gecici);
+  const fark = toplam - mahsup;
   const efektif = matrah > 0 ? (toplam / matrah) * 100 : 0;
 
   return (
@@ -63,11 +32,17 @@ export default function Hesaplayici() {
         <input id="stopaj" type="text" inputMode="decimal" value={stopaj} onChange={(e) => setStopaj(e.target.value)} />
       </div>
 
+      <div style={{ marginTop: 16 }}>
+        <label htmlFor="gecici">Yıl içinde ödenen geçici vergi (TL)</label>
+        <div className="muted">3 aylık dönemlerde ödediğiniz geçici vergi toplamı. Yoksa 0 bırakın.</div>
+        <input id="gecici" type="text" inputMode="decimal" value={gecici} onChange={(e) => setGecici(e.target.value)} />
+      </div>
+
       <div className="results">
         <div className="row"><span>Vergi matrahı</span><span>{tl(matrah)}</span></div>
         <div className="row"><span>Hesaplanan gelir vergisi</span><span>{tl(toplam)}</span></div>
-        <div className="row"><span>Efektif vergi oranı</span><span>%{efektif.toLocaleString("tr-TR", { maximumFractionDigits: 2 })}</span></div>
-        <div className="row"><span>Kesilen stopaj (mahsup)</span><span>{tl(kesilen)}</span></div>
+        <div className="row"><span>Efektif vergi oranı</span><span>{yuzde(efektif)}</span></div>
+        <div className="row"><span>Mahsup (stopaj + geçici vergi)</span><span>-{tl(mahsup)}</span></div>
         <div className="row total">
           <span>{fark >= 0 ? "Ödenecek vergi" : "Mahsup / iade edilebilecek"}</span>
           <span>{tl(Math.abs(fark))}</span>
@@ -79,7 +54,7 @@ export default function Hesaplayici() {
           <strong>Dilim dilim hesap</strong>
           {detay.map((d, i) => (
             <div className="row" key={i}>
-              <span>%{Math.round(d.oran * 100)} × {tl(d.tutar)}</span>
+              <span>{oranYazi(d.oran)} × {tl(d.tutar)}</span>
               <span>{tl(d.vergi)}</span>
             </div>
           ))}
