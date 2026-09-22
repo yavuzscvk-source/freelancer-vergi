@@ -2,6 +2,7 @@ import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
 import { VERGI, gelirVergisiHesapla } from "../../lib/vergi";
 import { oranYazi, yuzde } from "../../lib/format";
+import { sayfa } from "../../lib/seo";
 
 const Y = VERGI.yil;
 const sayi = (n) => n.toLocaleString("tr-TR");
