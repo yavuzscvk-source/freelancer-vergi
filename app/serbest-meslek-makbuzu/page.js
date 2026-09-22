@@ -1,9 +1,13 @@
 import Hesaplayici from "./Hesaplayici";
+import { sayfa } from "../../lib/seo";
 
-export const metadata = {
-  title: "Serbest Meslek Makbuzu Hesaplama 2026",
-  description: "Brüt veya net tutardan serbest meslek makbuzu stopajı, KDV ve tahsil edilecek tutarı saniyeler içinde hesaplayın.",
-};
+export const metadata = sayfa({
+  baslik: "Serbest Meslek Makbuzu Hesaplama 2026",
+  aciklama: "Brüt veya net tutardan serbest meslek makbuzu stopajı, KDV ve tahsil edilecek tutarı saniyeler içinde hesaplayın.",
+  yol: "/serbest-meslek-makbuzu",
+});
+
+
 
 export default function SerbestMeslekMakbuzu() {
   return (
