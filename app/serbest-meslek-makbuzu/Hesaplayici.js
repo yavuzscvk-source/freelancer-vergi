@@ -1,19 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { VERGI } from "../../lib/vergi";
+import { sayiyaCevir, tl, oranYazi } from "../../lib/format";
 
-const STOPAJ_ORANI = 0.2;
-const KDV_ORANI = 0.2;
-
-function sayiyaCevir(metin) {
-  const temiz = metin.replace(/\./g, "").replace(",", ".").trim();
-  const sayi = parseFloat(temiz);
-  return isNaN(sayi) || sayi < 0 ? 0 : sayi;
-}
-
-function tl(sayi) {
-  return sayi.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
-}
+const STOPAJ_ORANI = VERGI.serbestMeslekStopaji;
+const KDV_ORANI = VERGI.kdvGenelOrani;
 
 export default function Hesaplayici() {
   const [mod, setMod] = useState("brut");
@@ -50,9 +42,9 @@ export default function Hesaplayici() {
 
       <div className="results">
         <div className="row"><span>Brüt tutar</span><span>{tl(brut)}</span></div>
-        <div className="row"><span>Stopaj (%20)</span><span>{tl(stopaj)}</span></div>
+        <div className="row"><span>Stopaj ({oranYazi(STOPAJ_ORANI)})</span><span>{tl(stopaj)}</span></div>
         <div className="row"><span>Net tutar</span><span>{tl(net)}</span></div>
-        <div className="row"><span>KDV (%20)</span><span>{tl(kdv)}</span></div>
+        <div className="row"><span>KDV ({oranYazi(KDV_ORANI)})</span><span>{tl(kdv)}</span></div>
         <div className="row total"><span>Tahsil edilecek</span><span>{tl(tahsil)}</span></div>
       </div>
     </div>
