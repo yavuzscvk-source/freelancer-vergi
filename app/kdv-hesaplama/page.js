@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
+import { sayfa } from "../../lib/seo";
 
-export const metadata = {
-  title: "KDV Hesaplama 2026 (KDV Dahil ve Hariç)",
-  description: "KDV hariç tutara KDV ekleyin ya da KDV dahil tutardan KDV'yi ayırın. 2026 KDV oranları: %1, %10 ve %20.",
-};
+export const metadata = sayfa({
+  baslik: "KDV Hesaplama 2026 (KDV Dahil ve Hariç)",
+  aciklama: "KDV hariç tutara KDV ekleyin ya da KDV dahil tutardan KDV'yi ayırın. 2026 KDV oranları: %1, %10 ve %20.",
+  yol: "/kdv-hesaplama",
+});
+
+
 
 export default function KdvHesaplama() {
   return (
