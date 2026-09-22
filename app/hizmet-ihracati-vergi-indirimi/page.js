@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
 import { sayfa } from "../../lib/seo";
-
+import Kaynaklar from "../Kaynaklar";
 export const metadata = sayfa({
   baslik: "Yurt Dışına Hizmet Veren Freelancer Vergisi 2026 (%100 İndirim)",
   aciklama: "2026'da yurt dışı müşterilere verilen yazılım, tasarım ve mühendislik hizmetlerinde kazanç indirimi %100 oldu. Şartları okuyun, vergi avantajınızı hesaplayın.",
@@ -36,6 +36,7 @@ export default function HizmetIhracati() {
 
       <h2>Önemli not</h2>
       <p>Hizmetinizin kapsamda olup olmadığı, Upwork veya Fiverr gibi platformlar üzerinden yapılan işlerde müşterinin kim sayılacağı ve belge düzeni gibi konular duruma göre değişir. Beyannamenizden önce mutlaka bir mali müşavire danışın. Yurt içi kazancınızın vergisini ayrıca <Link href="/gelir-vergisi-hesaplama">gelir vergisi hesaplama</Link> aracıyla görebilirsiniz.</p>
+      <Kaynaklar sayfa="ihracat" />
     </>
   );
 }
