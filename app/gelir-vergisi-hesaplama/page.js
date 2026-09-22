@@ -7,10 +7,12 @@ import { sayfa } from "../../lib/seo";
 const Y = VERGI.yil;
 const sayi = (n) => n.toLocaleString("tr-TR");
 
-export const metadata = {
-  title: `Gelir Vergisi Hesaplama ${Y} (Serbest Meslek ve Freelancer)`,
-  description: `${Y} gelir vergisi dilimlerine göre serbest meslek ve freelancer kazancınızın vergisini, stopaj ve geçici vergi mahsubuyla birlikte hesaplayın.`,
-};
+export const metadata = sayfa({
+  baslik: `Gelir Vergisi Hesaplama ${Y} (Serbest Meslek ve Freelancer)`,
+  aciklama: `${Y} gelir vergisi dilimlerine göre serbest meslek ve freelancer kazancınızın vergisini, stopaj ve geçici vergi mahsubuyla birlikte hesaplayın.`,
+  yol: "/gelir-vergisi-hesaplama",
+});
+
 
 function tarifeSatirlari() {
   let alt = 0;
