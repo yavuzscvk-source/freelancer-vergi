@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
 import { sayfa } from "../../lib/seo";
-
+import Kaynaklar from "../Kaynaklar";
 export const metadata = sayfa({
   baslik: "Şahıs Şirketi mi Limited mi? Vergi Karşılaştırma 2026",
   aciklama: "Yıllık kârınıza göre şahıs şirketi ve limited şirketin toplam vergi yükünü karşılaştırın. 2026 gelir vergisi dilimleri, %25 kurumlar vergisi ve %15 kâr payı stopajı.",
@@ -32,6 +32,7 @@ export default function SahisLimited() {
 
       <h2>Bu hesaplamaya dahil olmayanlar</h2>
       <p>Limited şirketten maaş veya huzur hakkı almak, yüksek tutarlı kâr paylarında yıllık beyanname verilmesi, ihracat kazançlarındaki indirimli oranlar ve kişisel giderler sonucu değiştirebilir. Karar vermeden önce mali müşavirinizle görüşün. Şahıs şirketindeki vergiyi dilim dilim görmek için <Link href="/gelir-vergisi-hesaplama">gelir vergisi hesaplama</Link> aracını kullanabilirsiniz.</p>
+      <Kaynaklar sayfa="sirket" />
     </>
   );
 }
