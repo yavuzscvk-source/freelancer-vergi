@@ -32,6 +32,7 @@ export default function SerbestMeslekMakbuzu() {
 
       <h2>Yurt dışındaki müşteriye iş yaparsam?</h2>
       <p>Yurt dışındaki bir firmaya verilen hizmet belirli şartlarla hizmet ihracı sayılabilir ve KDV'den istisna olabilir. Yurt dışındaki firmalar Türkiye'de stopaj da kesmez. Bu durumda iki kutunun işaretini de kaldırarak hesaplayabilirsiniz. Şartları mali müşavirinizle teyit edin.</p>
+      <Kaynaklar sayfa="makbuz" />
     </>
   );
 }
