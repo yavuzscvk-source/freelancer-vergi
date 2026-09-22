@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { gelirVergisiHesapla } from "../../lib/vergi";
-import { sayiyaCevir, tl, yuzde, oranYazi } from "../../lib/format";
+import { sayiyaCevir, tl, eksi, yuzde, oranYazi } from "../../lib/format";
 
 export default function Hesaplayici() {
   const [gelir, setGelir] = useState("600.000");
@@ -42,7 +42,7 @@ export default function Hesaplayici() {
         <div className="row"><span>Vergi matrahı</span><span>{tl(matrah)}</span></div>
         <div className="row"><span>Hesaplanan gelir vergisi</span><span>{tl(toplam)}</span></div>
         <div className="row"><span>Efektif vergi oranı</span><span>{yuzde(efektif)}</span></div>
-        <div className="row"><span>Mahsup (stopaj + geçici vergi)</span><span>-{tl(mahsup)}</span></div>
+        <div className="row"><span>Mahsup (stopaj + geçici vergi)</span><span>{eksi(mahsup)}</span></div>
         <div className="row total">
           <span>{fark >= 0 ? "Ödenecek vergi" : "Mahsup / iade edilebilecek"}</span>
           <span>{tl(Math.abs(fark))}</span>
