@@ -1,0 +1,38 @@
+import { VERGI } from "../lib/vergi";
+
+const GVK = { ad: "193 sayılı Gelir Vergisi Kanunu (GİB)", url: "https://www.gib.gov.tr/mevzuat/kanun/433" };
+const TARIFE = { ad: "2026 gelir vergisi tarifesi (GİB)", url: "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2Fgelir-vergisi-tarifeleri%2Fgelir-vergisi-tarifesi-2026.pdf" };
+const GIB = { ad: "Gelir İdaresi Başkanlığı", url: "https://www.gib.gov.tr" };
+const KARAR = { ad: "11257 sayılı Cumhurbaşkanı Kararı (30/4/2026 tarihli Resmî Gazete)", url: "https://www.resmigazete.gov.tr/eskiler/2026/04/20260430-1.pdf" };
+const MEVZUAT = { ad: "Gelir Vergisi Kanunu güncel metni (mevzuat.gov.tr)", url: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=193&MevzuatTur=1&MevzuatTertip=4" };
+
+const KAYNAKLAR = {
+  makbuz: [GVK, GIB],
+  gelir: [GVK, TARIFE],
+  genc: [GVK, MEVZUAT],
+  sirket: [GVK, TARIFE],
+  kdv: [GIB],
+  ihracat: [KARAR, GVK, MEVZUAT],
+};
+
+export default function Kaynaklar({ sayfa }) {
+  const liste = KAYNAKLAR[sayfa] || [];
+  return (
+    <div className="card" style={{ marginTop: 32 }}>
+      <strong>Kaynaklar</strong>
+      <ul style={{ margin: "8px 0 0", paddingLeft: 18 }}>
+        {liste.map((k) => (
+          <li key={k.url}>
+            <a href={k.url} target="_blank" rel="noopener noreferrer">{k.ad}</a>
+          </li>
+        ))}
+      </ul>
+      <p className="muted" style={{ marginTop: 14, marginBottom: 0 }}>
+        {VERGI.yil} yılı mevzuatına göre hazırlanmıştır. Son güncelleme: {VERGI.sonGuncelleme}.
+        Hesaplamalar bilgilendirme amaçlı tahmini sonuçlardır; kişisel durumunuz, giderleriniz,
+        mükellefiyet türünüz ve istisnalar sonucu değiştirebilir. Bu site mali müşavirlik veya
+        hukuki danışmanlık hizmeti sunmamaktadır.
+      </p>
+    </div>
+  );
+}
