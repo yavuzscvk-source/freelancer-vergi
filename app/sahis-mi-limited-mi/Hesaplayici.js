@@ -1,44 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { VERGI, gelirVergisiHesapla } from "../../lib/vergi";
+import { sayiyaCevir, tl, yuzde, oranYazi } from "../../lib/format";
 
-const KURUMLAR_VERGISI = 0.25;
-const KAR_PAYI_STOPAJI = 0.15;
-const GENC_GIRISIMCI_ISTISNASI = 400000;
-
-// 2026 ücret dışı gelirler tarifesi (GVK md. 103)
-const DILIMLER = [
-  { ust: 190000, oran: 0.15 },
-  { ust: 400000, oran: 0.2 },
-  { ust: 1000000, oran: 0.27 },
-  { ust: 5300000, oran: 0.35 },
-  { ust: Infinity, oran: 0.4 },
-];
-
-function sayiyaCevir(metin) {
-  const temiz = metin.replace(/\./g, "").replace(",", ".").trim();
-  const sayi = parseFloat(temiz);
-  return isNaN(sayi) || sayi < 0 ? 0 : sayi;
-}
-
-function tl(sayi) {
-  return sayi.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
-}
-
-function yuzde(sayi) {
-  return "%" + sayi.toLocaleString("tr-TR", { maximumFractionDigits: 2 });
-}
-
-function vergiHesapla(matrah) {
-  let alt = 0;
-  let toplam = 0;
-  for (const d of DILIMLER) {
-    if (matrah <= alt) break;
-    toplam += (Math.min(matrah, d.ust) - alt) * d.oran;
-    alt = d.ust;
-  }
-  return toplam;
-}
+const KV = VERGI.kurumlarVergisi;
+const STOPAJ = VERGI.karPayiStopaji;
+const GENC = VERGI.gencGirisimciIstisnasi;
 
 export default function Hesaplayici() {
   const [kar, setKar] = useState("1.000.000");
@@ -48,13 +16,13 @@ export default function Hesaplayici() {
   const k = sayiyaCevir(kar);
   const oran = (v) => (k > 0 ? (v / k) * 100 : 0);
 
-  const sahisMatrah = Math.max(0, k - (genc ? GENC_GIRISIMCI_ISTISNASI : 0));
-  const sahisVergi = vergiHesapla(sahisMatrah);
+  const sahisMatrah = Math.max(0, k - (genc ? GENC : 0));
+  const sahisVergi = gelirVergisiHesapla(sahisMatrah).toplam;
   const sahisNet = k - sahisVergi;
 
-  const kv = k * KURUMLAR_VERGISI;
+  const kv = k * KV;
   const dagitilan = (k - kv) * (dagitim / 100);
-  const stopaj = dagitilan * KAR_PAYI_STOPAJI;
+  const stopaj = dagitilan * STOPAJ;
   const limitedVergi = kv + stopaj;
   const limitedCebe = dagitilan - stopaj;
   const sirkette = k - kv - dagitilan;
@@ -92,8 +60,8 @@ export default function Hesaplayici() {
 
       <div className="results">
         <strong>Limited şirket</strong>
-        <div className="row"><span>Kurumlar vergisi (%25)</span><span>{tl(kv)}</span></div>
-        <div className="row"><span>Kâr payı stopajı (%15)</span><span>{tl(stopaj)}</span></div>
+        <div className="row"><span>Kurumlar vergisi ({oranYazi(KV)})</span><span>{tl(kv)}</span></div>
+        <div className="row"><span>Kâr payı stopajı ({oranYazi(STOPAJ)})</span><span>{tl(stopaj)}</span></div>
         <div className="row"><span>Toplam vergi</span><span>{tl(limitedVergi)}</span></div>
         <div className="row"><span>Efektif vergi oranı</span><span>{yuzde(oran(limitedVergi))}</span></div>
         <div className="row"><span>Cebinize geçen</span><span>{tl(limitedCebe)}</span></div>
@@ -101,11 +69,15 @@ export default function Hesaplayici() {
       </div>
 
       {kazanan && (
-        <div className="row total" style={{ marginTop: 16, color: "#15803d" }}>
+        <div className="row total" style={{ marginTop: 16 }}>
           <span>{kazanan} daha az vergi</span>
           <span>{tl(fark)}</span>
         </div>
       )}
+
+      <p className="muted" style={{ marginTop: 12 }}>
+        Limited şirketten maaş veya huzur hakkı alınması ve yüksek tutarlı kâr paylarının yıllık beyanı bu hesaba dahil değildir.
+      </p>
     </div>
   );
 }
