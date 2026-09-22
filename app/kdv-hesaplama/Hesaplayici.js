@@ -1,22 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { VERGI } from "../../lib/vergi";
+import { sayiyaCevir, tl } from "../../lib/format";
 
-const ORANLAR = [20, 10, 1];
-
-function sayiyaCevir(metin) {
-  const temiz = metin.replace(/\./g, "").replace(",", ".").trim();
-  const sayi = parseFloat(temiz);
-  return isNaN(sayi) || sayi < 0 ? 0 : sayi;
-}
-
-function tl(sayi) {
-  return sayi.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
-}
+const ORANLAR = VERGI.kdvOranlari;
 
 export default function Hesaplayici() {
   const [mod, setMod] = useState("ekle");
-  const [oran, setOran] = useState(20);
+  const [oran, setOran] = useState(ORANLAR[0]);
   const [tutar, setTutar] = useState("10.000");
 
   const girilen = sayiyaCevir(tutar);
