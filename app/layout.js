@@ -10,6 +10,18 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const MENU = [
+  { href: "/serbest-meslek-makbuzu", ad: "Makbuz" },
+  { href: "/gelir-vergisi-hesaplama", ad: "Gelir vergisi" },
+  { href: "/genc-girisimci-istisnasi", ad: "Genç girişimci" },
+  { href: "/sahis-mi-limited-mi", ad: "Şahıs / Limited" },
+  { href: "/kdv-hesaplama", ad: "KDV" },
+  { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışı" },
+];
+
+const menuKutu = { maxWidth: 680, margin: "0 auto", padding: "0 20px 12px", display: "flex", gap: 18, overflowX: "auto", whiteSpace: "nowrap" };
+const menuLink = { color: "var(--muted)", textDecoration: "none", fontWeight: 600, fontSize: "0.92rem" };
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -29,12 +41,17 @@ export default function RootLayout({ children }) {
     <html lang="tr" className={manrope.variable}>
       <body>
         <header className="header">
-          <div className="header-inner">
+          <div className="header-inner" style={{ paddingBottom: 10 }}>
             <Link href="/" className="logo">
               <span className="logo-mark">₺</span>
               Freelancer Vergi
             </Link>
           </div>
+          <nav style={menuKutu}>
+            {MENU.map((m) => (
+              <Link key={m.href} href={m.href} style={menuLink}>{m.ad}</Link>
+            ))}
+          </nav>
         </header>
         <main className="container">{children}</main>
         <footer className="footer">
