@@ -1,7 +1,12 @@
-export const metadata = {
-  title: "İletişim",
-  description: "Freelancer Vergi ile iletişime geçin: soru, öneri ve hata bildirimleri.",
-};
+import { sayfa } from "../../lib/seo";
+
+export const metadata = sayfa({
+  baslik: "İletişim",
+  aciklama: "Freelancer Vergi ile iletişime geçin: soru, öneri ve hata bildirimleri.",
+  yol: "/iletisim",
+});
+
+
 
 export default function Iletisim() {
   return (
