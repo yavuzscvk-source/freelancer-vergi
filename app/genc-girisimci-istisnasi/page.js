@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
+import { sayfa } from "../../lib/seo";
 
-export const metadata = {
-  title: "Genç Girişimci İstisnası Hesaplama 2026",
-  description: "2026 genç girişimci kazanç istisnası (400.000 TL) ile ödeyeceğiniz gelir vergisini ve vergi avantajınızı hesaplayın. Şartlar ve güncel bilgiler.",
-};
+export const metadata = sayfa({
+  baslik: "Genç Girişimci İstisnası Hesaplama 2026",
+  aciklama: "2026 genç girişimci kazanç istisnası (400.000 TL) ile ödeyeceğiniz gelir vergisini ve vergi avantajınızı hesaplayın. Şartlar ve güncel bilgiler.",
+  yol: "/genc-girisimci-istisnasi",
+});
+
+
 
 export default function GencGirisimci() {
   return (
