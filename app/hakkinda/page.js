@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { sayfa } from "../../lib/seo";
 
-export const metadata = {
-  title: "Hakkında",
-  description: "Freelancer Vergi, serbest çalışanlar için sade, ücretsiz ve güncel vergi hesaplama araçları sunar.",
-};
+export const metadata = sayfa({
+  baslik: "Hakkında",
+  aciklama: "Freelancer Vergi, serbest çalışanlar için sade, ücretsiz ve güncel vergi hesaplama araçları sunar.",
+  yol: "/hakkinda",
+});
+
 
 export default function Hakkinda() {
   return (
