@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { VERGI, gelirVergisiHesapla } from "../../lib/vergi";
-import { sayiyaCevir, tl } from "../../lib/format";
+import { sayiyaCevir, tl, eksi } from "../../lib/format";
 
 const ISTISNA = VERGI.gencGirisimciIstisnasi;
 
@@ -45,14 +45,12 @@ export default function Hesaplayici() {
 
       <div className="results">
         <div className="row"><span>Yıllık kazanç</span><span>{tl(kazanc)}</span></div>
-        <div className="row"><span>Genç girişimci istisnası</span><span>-{tl(istisnaTutari)}</span></div>
+        <div className="row"><span>Genç girişimci istisnası</span><span>{eksi(istisnaTutari)}</span></div>
         <div className="row"><span>Vergi matrahı</span><span>{tl(matrah)}</span></div>
         <div className="row"><span>İstisna olmasaydı vergi</span><span>{tl(normalVergi)}</span></div>
         <div className="row"><span>İstisnalı gelir vergisi</span><span>{tl(istisnaliVergi)}</span></div>
-        <div className="row" style={{ fontWeight: 700 }}>
-          <span>Vergi avantajınız</span><span>{tl(tasarruf)}</span>
-        </div>
-        <div className="row"><span>Mahsup (stopaj + geçici vergi)</span><span>-{tl(mahsup)}</span></div>
+        <div className="row" style={{ fontWeight: 700 }}><span>Vergi avantajınız</span><span>{tl(tasarruf)}</span></div>
+        <div className="row"><span>Mahsup (stopaj + geçici vergi)</span><span>{eksi(mahsup)}</span></div>
         <div className="row total">
           <span>{fark >= 0 ? "Ödenecek vergi" : "Mahsup / iade edilebilecek"}</span>
           <span>{tl(Math.abs(fark))}</span>
