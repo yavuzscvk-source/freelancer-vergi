@@ -1,5 +1,6 @@
 import Hesaplayici from "./Hesaplayici";
 import { sayfa } from "../../lib/seo";
+import Kaynaklar from "../Kaynaklar";
 
 export const metadata = sayfa({
   baslik: "Serbest Meslek Makbuzu Hesaplama 2026",
