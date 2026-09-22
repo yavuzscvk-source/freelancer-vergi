@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
 import { sayfa } from "../../lib/seo";
-
+import Kaynaklar from "../Kaynaklar";
 export const metadata = sayfa({
   baslik: "Genç Girişimci İstisnası Hesaplama 2026",
   aciklama: "2026 genç girişimci kazanç istisnası (400.000 TL) ile ödeyeceğiniz gelir vergisini ve vergi avantajınızı hesaplayın. Şartlar ve güncel bilgiler.",
@@ -35,6 +35,7 @@ export default function GencGirisimci() {
 
       <h2>Stopaj kesilirse ne olur?</h2>
       <p>Şirketlere kestiğiniz serbest meslek makbuzlarında stopaj kesilmeye devam eder. İstisna sayesinde hesaplanan vergi düşük kalacağı için, kesilen stopaj yıllık beyannamede mahsup edilir ve fazlası iade konusu olabilir. Makbuz başına stopajı <Link href="/serbest-meslek-makbuzu">serbest meslek makbuzu hesaplama</Link>, istisnasız vergiyi <Link href="/gelir-vergisi-hesaplama">gelir vergisi hesaplama</Link> aracıyla görebilirsiniz.</p>
+      <Kaynaklar sayfa="genc" />
     </>
   );
 }
