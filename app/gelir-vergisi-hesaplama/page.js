@@ -3,6 +3,7 @@ import Hesaplayici from "./Hesaplayici";
 import { VERGI, gelirVergisiHesapla } from "../../lib/vergi";
 import { oranYazi, yuzde } from "../../lib/format";
 import { sayfa } from "../../lib/seo";
+import Kaynaklar from "../Kaynaklar";
 
 const Y = VERGI.yil;
 const sayi = (n) => n.toLocaleString("tr-TR");
@@ -56,6 +57,7 @@ export default function GelirVergisi() {
 
       <h2>Beyanname ne zaman verilir?</h2>
       <p>Yıllık gelir vergisi beyannamesi, kazancın elde edildiği yılı izleyen yılın mart ayında verilir. Vergi mart ve temmuz aylarında iki taksitte ödenir.</p>
+      <Kaynaklar sayfa="gelir" />
     </>
   );
 }
