@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hesaplayici from "./Hesaplayici";
 import { sayfa } from "../../lib/seo";
-
+import Kaynaklar from "../Kaynaklar";
 export const metadata = sayfa({
   baslik: "KDV Hesaplama 2026 (KDV Dahil ve Hariç)",
   aciklama: "KDV hariç tutara KDV ekleyin ya da KDV dahil tutardan KDV'yi ayırın. 2026 KDV oranları: %1, %10 ve %20.",
@@ -32,6 +32,7 @@ export default function KdvHesaplama() {
 
       <h2>KDV beyannamesi ne zaman verilir?</h2>
       <p>KDV beyannamesi, dönemi takip eden ayın 28'inci günü sonuna kadar verilir ve vergi aynı süre içinde ödenir.</p>
+      <Kaynaklar sayfa="kdv" />
     </>
   );
 }
