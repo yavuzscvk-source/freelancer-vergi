@@ -16,33 +16,33 @@ const GRUPLAR = [
       { href: "/net-gelir-hesaplama", ad: "Net gelir hesaplama", not: "Vergi ve primden sonra cebinize kalan." },
       { href: "/saatlik-ucret-hesaplama", ad: "Saatlik ücret hesaplama", not: "Hedef gelirinize göre taban saat ücreti." },
       { href: "/kdv-hesaplama", ad: "KDV hesaplama", not: "KDV ekleme ve ayırma." },
+    ],
+  },
   {
-    ad: "İçerik üreticileri",
+    ad: "Yurt dışı ve platformlar",
     araclar: [
-      { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi", not: "İstisna, %15 stopaj ve sınır kontrolü." },
-      { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok, Twitch", not: "Sosyal medya kazancının vergisi." },
-    ],
-  },
-
-    ],
-  },
-  {
-   ad: "Yurt dışı ve platformlar",
-   araclar: [
       { href: "/hizmet-ihracati-vergi-indirimi", ad: "Hizmet ihracatı %100 indirim", not: "Yurt dışına yazılım, tasarım, mühendislik." },
       { href: "/upwork-vergi-hesaplama", ad: "Upwork vergi hesaplama", not: "Komisyon, kur ve vergi sonrası kazanç." },
       { href: "/fiverr-vergi-hesaplama", ad: "Fiverr vergi hesaplama", not: "%20 komisyon sonrası net kazanç." },
     ],
   },
   {
-   ad: "Şirket ve maliyet",
-   araclar: [
+    ad: "Şirket ve maliyet",
+    araclar: [
       { href: "/sahis-mi-limited-mi", ad: "Şahıs şirketi mi limited mi?", not: "İki şirket türünün vergi yükü." },
       { href: "/sahis-sirketi-maliyeti", ad: "Şahıs şirketi aylık maliyeti", not: "Bağ-Kur, müşavir ve sabit giderler." },
       { href: "/genc-girisimci-istisnasi", ad: "Genç girişimci istisnası", not: "400.000 TL istisna ve avantajınız." },
     ],
   },
+  {
+    ad: "İçerik üreticileri",
+    araclar: [
+      { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi", not: "İstisna, %15 stopaj ve sınır kontrolü." },
+      { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok, Kick", not: "Sosyal medya ve yayıncılık kazancının vergisi." },
+    ],
+  },
 ];
+
 
 export default function Hesaplayicilar() {
   return (
