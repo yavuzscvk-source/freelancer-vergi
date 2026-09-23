@@ -20,6 +20,8 @@ const MENU = [
   { href: "/sahis-sirketi-maliyeti", ad: "Şirket maliyeti" },  
   { href: "/net-gelir-hesaplama", ad: "Net gelir" },
   { href: "/saatlik-ucret-hesaplama", ad: "Saatlik ücret" },
+  { href: "/upwork-vergi-hesaplama", ad: "Upwork" },
+  { href: "/fiverr-vergi-hesaplama", ad: "Fiverr" },
 
 ];
 
