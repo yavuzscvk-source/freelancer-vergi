@@ -21,7 +21,7 @@ const ARACLAR = [
   { href: "/upwork-vergi-hesaplama", baslik: "Upwork vergi hesaplama", aciklama: "Komisyon, kur, Bağ-Kur ve vergiden sonra Upwork kazancınız." },
   { href: "/fiverr-vergi-hesaplama", baslik: "Fiverr vergi hesaplama", aciklama: "%20 komisyon ve vergilerden sonra Fiverr kazancınız." },
   { href: "/youtube-vergi-hesaplama", baslik: "YouTube gelir vergisi hesaplama", aciklama: "İçerik üreticiliği istisnası, %15 stopaj ve 5.300.000 TL sınırı." },
-  { href: "/instagram-vergi-hesaplama", baslik: "Instagram, TikTok ve Twitch vergisi", aciklama: "Sosyal medya kazancınız istisna kapsamında mı?" },
+  { href: "/instagram-vergi-hesaplama", baslik: "Instagram, TikTok ve Kick vergisi", aciklama: "Sosyal medya kazancınız istisna kapsamında mı?" },
 
 ];
 
