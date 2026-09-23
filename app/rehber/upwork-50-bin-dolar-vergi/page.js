@@ -23,7 +23,8 @@ export default function Yazi() {
         <div className="row"><span>USD/TL kuru (varsayım)</span><span>48,00</span></div>
         <div className="row"><span>Yıllık işle ilgili giderler</span><span>120.000 TL</span></div>
         <div className="row"><span>Mükellefiyet</span><span>Şahıs şirketi</span></div>
-        <div className="row"><span>Bağ-Kur beyanı</span><span>Alt sınır</span></div>
+        <div className="row"><span>Bağ-Kur beyanı</span><span>Alt sınırdan</span></div>
+
 
       </div>
       <p className="muted">Kur her gün değişir; buradaki 48,00 yalnızca örnek bir varsayımdır.</p>
