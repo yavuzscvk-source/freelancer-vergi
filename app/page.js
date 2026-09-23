@@ -50,6 +50,8 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <p><Link href="/hesaplayicilar">Tüm hesaplama araçlarını görün</Link></p>
+
     </>
   );
 }
