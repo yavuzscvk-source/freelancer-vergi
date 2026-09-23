@@ -12,5 +12,7 @@ export default function sitemap() {
     { url: `${SITE_URL}/hakkinda`, lastModified: new Date() },
     { url: `${SITE_URL}/iletisim`, lastModified: new Date() },
     { url: `${SITE_URL}/gizlilik-politikasi`, lastModified: new Date() },
+    { url: `${SITE_URL}/sahis-sirketi-maliyeti`, lastModified: new Date() },
+
   ];
 }
