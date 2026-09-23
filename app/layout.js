@@ -58,9 +58,13 @@ export default function RootLayout({ children }) {
         <footer className="footer">
           <div className="footer-inner">
             <nav style={{ display: "flex", gap: 16, flexWrap: "wrap", marginBottom: 8 }}>
-              <Link href="/hakkinda">Hakkında</Link>
+                           <Link href="/hakkinda">Hakkında</Link>
               <Link href="/iletisim">İletişim</Link>
-              <Link href="/gizlilik-politikasi">Gizlilik Politikası</Link>
+              <Link href="/gizlilik-politikasi">Gizlilik</Link>
+              <Link href="/cerez-politikasi">Çerez Politikası</Link>
+              <Link href="/kullanim-kosullari">Kullanım Koşulları</Link>
+              <Link href="/sorumluluk-reddi">Sorumluluk Reddi</Link>
+
             </nav>
             Bu sitedeki hesaplamalar bilgilendirme amaçlıdır. Kesin sonuç için mali müşavirinize danışın.
           </div>
