@@ -13,6 +13,8 @@ const ARACLAR = {
   saatlik: { href: "/saatlik-ucret-hesaplama", ad: "Freelancer saatlik ücret hesaplama" },
   upwork: { href: "/upwork-vergi-hesaplama", ad: "Upwork vergi hesaplama" },
   fiverr: { href: "/fiverr-vergi-hesaplama", ad: "Fiverr vergi hesaplama" },
+  youtube: { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi hesaplama" },
+  instagram: { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok ve Twitch vergisi" },
 
 };
 
