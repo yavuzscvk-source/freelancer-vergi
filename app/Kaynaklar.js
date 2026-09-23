@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { VERGI } from "../lib/vergi";
+import { SITE_URL } from "../lib/site";
 
 const ARACLAR = {
   makbuz: { href: "/serbest-meslek-makbuzu", ad: "Serbest meslek makbuzu hesaplama" },
@@ -14,8 +15,13 @@ const ARACLAR = {
   upwork: { href: "/upwork-vergi-hesaplama", ad: "Upwork vergi hesaplama" },
   fiverr: { href: "/fiverr-vergi-hesaplama", ad: "Fiverr vergi hesaplama" },
   youtube: { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi hesaplama" },
-  instagram: { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok ve Twitch vergisi" },
+  instagram: { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok ve Kick vergisi" },
+};
 
+const REHBERLER = {
+  rehberTemel: { href: "/rehber/freelancer-vergi-oder-mi", ad: "Freelancer vergi öder mi, şirket kurmak zorunda mı?" },
+  rehberBelge: { href: "/rehber/fatura-mi-makbuz-mu", ad: "Freelancer fatura mı makbuz mu keser?" },
+  rehberYurtdisi: { href: "/rehber/yurt-disindan-gelen-para", ad: "Yurt dışından para gelirse vergi ödenir mi?" },
 };
 
 const GVK = { ad: "193 sayılı Gelir Vergisi Kanunu (GİB)", url: "https://www.gib.gov.tr/mevzuat/kanun/433" };
@@ -42,15 +48,70 @@ const KAYNAKLAR = {
   rehberTemel: [GVK, MEVZUAT, TARIFE],
   rehberBelge: [GVK, GIB],
   rehberYurtdisi: [KARAR, GVK, MEVZUAT],
-
 };
+
+function schema(sayfa) {
+  const rehberMi = Boolean(REHBERLER[sayfa]);
+  const bilgi = REHBERLER[sayfa] || ARACLAR[sayfa];
+  if (!bilgi) return null;
+
+  const url = SITE_URL + bilgi.href;
+  const ana = rehberMi
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: bilgi.ad,
+        url,
+        inLanguage: "tr-TR",
+        dateModified: VERGI.sonGuncellemeTarihi,
+        publisher: { "@type": "Organization", name: "Freelancer Vergi", url: SITE_URL },
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: bilgi.ad,
+        url,
+        inLanguage: "tr-TR",
+        applicationCategory: "FinanceApplication",
+        operatingSystem: "Web",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "TRY" },
+      };
+
+  const yol = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Ana sayfa", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: rehberMi ? "Vergi rehberi" : "Hesaplayıcılar",
+        item: SITE_URL + (rehberMi ? "/rehber" : "/hesaplayicilar"),
+      },
+      { "@type": "ListItem", position: 3, name: bilgi.ad, item: url },
+    ],
+  };
+
+  return [ana, yol];
+}
 
 export default function Kaynaklar({ sayfa }) {
   const liste = KAYNAKLAR[sayfa] || [];
-  const digerleri = Object.keys(ARACLAR).filter((k) => k !== sayfa).map((k) => ARACLAR[k]);
+  const veri = schema(sayfa);
+  const digerleri = Object.keys(ARACLAR)
+    .filter((k) => k !== sayfa)
+    .map((k) => ARACLAR[k])
+    .slice(0, 6);
 
   return (
     <>
+      {veri && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(veri) }}
+        />
+      )}
+
       <h2>Bunlar da işinize yarayabilir</h2>
       <ul className="tools">
         {digerleri.map((a) => (
@@ -59,6 +120,7 @@ export default function Kaynaklar({ sayfa }) {
           </li>
         ))}
       </ul>
+      <p className="muted"><Link href="/hesaplayicilar">Tüm araçlar</Link> · <Link href="/rehber">Vergi rehberi</Link></p>
 
       <div className="card">
         <strong>Kaynaklar</strong>
