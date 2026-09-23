@@ -23,6 +23,10 @@ export default function sitemap() {
     { url: `${SITE_URL}/cerez-politikasi`, lastModified: new Date() },
     { url: `${SITE_URL}/youtube-vergi-hesaplama`, lastModified: new Date() },
     { url: `${SITE_URL}/instagram-vergi-hesaplama`, lastModified: new Date() },
+    { url: `${SITE_URL}/rehber`, lastModified: new Date() },
+    { url: `${SITE_URL}/rehber/freelancer-vergi-oder-mi`, lastModified: new Date() },
+    { url: `${SITE_URL}/rehber/fatura-mi-makbuz-mu`, lastModified: new Date() },
+    { url: `${SITE_URL}/rehber/yurt-disindan-gelen-para`, lastModified: new Date() },
 
   ];
 }
