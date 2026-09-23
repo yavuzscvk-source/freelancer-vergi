@@ -26,6 +26,8 @@ const KAYNAKLAR = {
   sirket: [GVK, TARIFE],
   kdv: [GIB],
   ihracat: [KARAR, GVK, MEVZUAT],
+  maliyet: [SGK, GVK],
+
 };
 
 export default function Kaynaklar({ sayfa }) {
