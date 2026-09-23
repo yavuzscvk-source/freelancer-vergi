@@ -18,6 +18,8 @@ const ARACLAR = [
   { href: "/sahis-sirketi-maliyeti", baslik: "Şahıs şirketi aylık maliyeti", aciklama: "Bağ-Kur primi, müşavir ve sabit giderlerle aylık gerçek maliyet." },
   { href: "/net-gelir-hesaplama", baslik: "Freelancer net gelir hesaplama", aciklama: "Vergi, Bağ-Kur ve giderlerden sonra cebinize ne kalıyor?" },
   { href: "/saatlik-ucret-hesaplama", baslik: "Freelancer saatlik ücret hesaplama", aciklama: "Hedef net gelirinize göre minimum saat ücretiniz." },
+  { href: "/upwork-vergi-hesaplama", baslik: "Upwork vergi hesaplama", aciklama: "Komisyon, kur, Bağ-Kur ve vergiden sonra Upwork kazancınız." },
+  { href: "/fiverr-vergi-hesaplama", baslik: "Fiverr vergi hesaplama", aciklama: "%20 komisyon ve vergilerden sonra Fiverr kazancınız." },
 
 ];
 
