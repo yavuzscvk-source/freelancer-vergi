@@ -72,6 +72,29 @@ export default function RootLayout({ children }) {
         </footer>
         <Analytics />
       </body>
+          <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Freelancer Vergi",
+                url: SITE_URL,
+                inLanguage: "tr-TR",
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Freelancer Vergi",
+                url: SITE_URL,
+                logo: SITE_URL + "/icon.svg",
+                email: "freelancervergi@gmail.com",
+              },
+            ]),
+          }}
+        />
+
     </html>
   );
 }
