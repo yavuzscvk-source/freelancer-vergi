@@ -15,6 +15,8 @@ export default function sitemap() {
     { url: `${SITE_URL}/sahis-sirketi-maliyeti`, lastModified: new Date() },
     { url: `${SITE_URL}/net-gelir-hesaplama`, lastModified: new Date() },
     { url: `${SITE_URL}/saatlik-ucret-hesaplama`, lastModified: new Date() },
+    { url: `${SITE_URL}/upwork-vergi-hesaplama`, lastModified: new Date() },
+    { url: `${SITE_URL}/fiverr-vergi-hesaplama`, lastModified: new Date() },
 
   ];
 }
