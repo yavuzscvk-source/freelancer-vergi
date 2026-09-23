@@ -89,7 +89,8 @@ input[type="text"]:focus { border-color: var(--link); outline: none; box-shadow:
 .results > strong { display: block; margin-bottom: 4px; }
 
 .row { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px dotted var(--line); }
-.row span:last-child { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.row span:last-child { text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.row span:first-child { min-width: 0; }
 .row.total { font-weight: 800; font-size: 1.1rem; padding-top: 12px; border-bottom: 3px double var(--ink); }
 
 .btn { display: inline-block; margin-top: 16px; padding: 12px 18px; background: var(--btn-bg); color: var(--btn-text); border-radius: 10px; font-weight: 700; text-decoration: none; }
