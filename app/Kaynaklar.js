@@ -28,6 +28,7 @@ const KAYNAKLAR = {
   kdv: [GIB],
   ihracat: [KARAR, GVK, MEVZUAT],
   maliyet: [SGK, GVK],
+  net: [GVK, SGK, TARIFE],
 
 };
 
