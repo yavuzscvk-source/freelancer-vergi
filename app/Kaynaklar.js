@@ -39,6 +39,9 @@ const KAYNAKLAR = {
   fiverr: [KARAR, GVK, SGK],
   youtube: [GVK, MEVZUAT, TARIFE],
   instagram: [GVK, MEVZUAT],
+  rehberTemel: [GVK, MEVZUAT, TARIFE],
+  rehberBelge: [GVK, GIB],
+  rehberYurtdisi: [KARAR, GVK, MEVZUAT],
 
 };
 
