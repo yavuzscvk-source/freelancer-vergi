@@ -17,6 +17,7 @@ const ARACLAR = [
   { href: "/hizmet-ihracati-vergi-indirimi", baslik: "Yurt dışına hizmet: %100 vergi indirimi", aciklama: "2026'da yazılım, tasarım ve mühendislik ihracatında kazanç indirimi." },
   { href: "/sahis-sirketi-maliyeti", baslik: "Şahıs şirketi aylık maliyeti", aciklama: "Bağ-Kur primi, müşavir ve sabit giderlerle aylık gerçek maliyet." },
   { href: "/net-gelir-hesaplama", baslik: "Freelancer net gelir hesaplama", aciklama: "Vergi, Bağ-Kur ve giderlerden sonra cebinize ne kalıyor?" },
+  { href: "/saatlik-ucret-hesaplama", baslik: "Freelancer saatlik ücret hesaplama", aciklama: "Hedef net gelirinize göre minimum saat ücretiniz." },
 
 ];
 
