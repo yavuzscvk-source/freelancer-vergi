@@ -37,6 +37,8 @@ const KAYNAKLAR = {
   saatlik: [GVK, SGK],
   upwork: [KARAR, GVK, SGK],
   fiverr: [KARAR, GVK, SGK],
+  youtube: [GVK, MEVZUAT, TARIFE],
+  instagram: [GVK, MEVZUAT],
 
 };
 
