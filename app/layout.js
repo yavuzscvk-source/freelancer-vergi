@@ -11,6 +11,7 @@ const manrope = Manrope({
 });
 const MENU = [
   { href: "/hesaplayicilar", ad: "Tüm araçlar" },
+  { href: "/rehber", ad: "Rehber" },
   { href: "/serbest-meslek-makbuzu", ad: "Makbuz" },
   { href: "/gelir-vergisi-hesaplama", ad: "Gelir vergisi" },
   { href: "/net-gelir-hesaplama", ad: "Net gelir" },
