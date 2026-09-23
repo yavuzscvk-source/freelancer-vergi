@@ -23,6 +23,9 @@ const REHBERLER = {
   rehberTemel: { href: "/rehber/freelancer-vergi-oder-mi", ad: "Freelancer vergi öder mi, şirket kurmak zorunda mı?" },
   rehberBelge: { href: "/rehber/fatura-mi-makbuz-mu", ad: "Freelancer fatura mı makbuz mu keser?" },
   rehberYurtdisi: { href: "/rehber/yurt-disindan-gelen-para", ad: "Yurt dışından para gelirse vergi ödenir mi?" },
+  rehberGecici: { href: "/rehber/gecici-vergi-nedir", ad: "Geçici vergi nedir, ne zaman ödenir?" },
+  rehberSirket: { href: "/rehber/yazilimci-sahis-sirketi", ad: "Yazılımcı şahıs şirketi açmalı mı?" },
+
 };
 
 const GVK = { ad: "193 sayılı Gelir Vergisi Kanunu (GİB)", url: "https://www.gib.gov.tr/mevzuat/kanun/433" };
@@ -49,6 +52,9 @@ const KAYNAKLAR = {
   rehberTemel: [GVK, MEVZUAT, TARIFE],
   rehberBelge: [GVK, GIB],
   rehberYurtdisi: [KARAR, GVK, MEVZUAT],
+  rehberGecici: [GVK, MEVZUAT, GIB],
+  rehberSirket: [GVK, SGK, KARAR],
+
 };
 
 function schema(sayfa) {
