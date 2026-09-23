@@ -30,6 +30,7 @@ export default function sitemap() {
     { url: `${SITE_URL}/rehber/gecici-vergi-nedir`, lastModified: new Date() },
     { url: `${SITE_URL}/rehber/e-smm-nasil-kesilir`, lastModified: new Date() },
     { url: `${SITE_URL}/rehber/yazilimci-sahis-sirketi`, lastModified: new Date() },
+    { url: `${SITE_URL}/rehber/upwork-50-bin-dolar-vergi`, lastModified: new Date() },
 
   ];
 }
