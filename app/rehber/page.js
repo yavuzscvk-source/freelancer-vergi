@@ -14,6 +14,7 @@ const YAZILAR = [
   { href: "/rehber/gecici-vergi-nedir", ad: "Geçici vergi nedir, ne zaman ödenir?", not: "Dönemler, oran ve yıllık beyannamede mahsup." },
   { href: "/rehber/e-smm-nasil-kesilir", ad: "e-Serbest meslek makbuzu nasıl kesilir?", not: "Tahsilat zamanı, stopaj ve sık yapılan hatalar." },
   { href: "/rehber/yazilimci-sahis-sirketi", ad: "Yazılımcı şahıs şirketi açmalı mı?", not: "Maliyet, avantajlar ve doğru zamanlama." },
+  { href: "/rehber/upwork-50-bin-dolar-vergi", ad: "Upwork'ten 50.000 dolar kazanırsam ne kadar vergi öderim?", not: "Adım adım örnek hesap ve iki farklı senaryo." },
 
 ];
 
