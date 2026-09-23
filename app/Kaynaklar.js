@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VERGI } from "../lib/vergi";
 import { SITE_URL } from "../lib/site";
+import { ReklamAlani, Ortaklar } from "./Reklam";
 
 const ARACLAR = {
   makbuz: { href: "/serbest-meslek-makbuzu", ad: "Serbest meslek makbuzu hesaplama" },
