@@ -30,6 +30,7 @@ const KAYNAKLAR = {
   ihracat: [KARAR, GVK, MEVZUAT],
   maliyet: [SGK, GVK],
   net: [GVK, SGK, TARIFE],
+  saatlik: [GVK, SGK],
 
 };
 
