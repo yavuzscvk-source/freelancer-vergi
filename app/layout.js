@@ -9,21 +9,16 @@ const manrope = Manrope({
   variable: "--font-sans",
   display: "swap",
 });
-
 const MENU = [
+  { href: "/hesaplayicilar", ad: "Tüm araçlar" },
   { href: "/serbest-meslek-makbuzu", ad: "Makbuz" },
   { href: "/gelir-vergisi-hesaplama", ad: "Gelir vergisi" },
-  { href: "/genc-girisimci-istisnasi", ad: "Genç girişimci" },
-  { href: "/sahis-mi-limited-mi", ad: "Şahıs / Limited" },
-  { href: "/kdv-hesaplama", ad: "KDV" },
-  { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışı" },
-  { href: "/sahis-sirketi-maliyeti", ad: "Şirket maliyeti" },  
   { href: "/net-gelir-hesaplama", ad: "Net gelir" },
-  { href: "/saatlik-ucret-hesaplama", ad: "Saatlik ücret" },
-  { href: "/upwork-vergi-hesaplama", ad: "Upwork" },
-  { href: "/fiverr-vergi-hesaplama", ad: "Fiverr" },
-
+  { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışı" },
+  { href: "/sahis-mi-limited-mi", ad: "Şahıs / Limited" },
 ];
+
+
 
 const menuKutu = { maxWidth: 680, margin: "0 auto", padding: "0 20px 12px", display: "flex", gap: 18, overflowX: "auto", whiteSpace: "nowrap" };
 const menuLink = { color: "var(--muted)", textDecoration: "none", fontWeight: 600, fontSize: "0.92rem" };
