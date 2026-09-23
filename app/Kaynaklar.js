@@ -17,6 +17,7 @@ const TARIFE = { ad: "2026 gelir vergisi tarifesi (GİB)", url: "https://cdn.gib
 const GIB = { ad: "Gelir İdaresi Başkanlığı", url: "https://www.gib.gov.tr" };
 const KARAR = { ad: "11257 sayılı Cumhurbaşkanı Kararı (30/4/2026 tarihli Resmî Gazete)", url: "https://www.resmigazete.gov.tr/eskiler/2026/04/20260430-1.pdf" };
 const MEVZUAT = { ad: "Gelir Vergisi Kanunu güncel metni (mevzuat.gov.tr)", url: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=193&MevzuatTur=1&MevzuatTertip=4" };
+const SGK = { ad: "Sosyal Güvenlik Kurumu", url: "https://www.sgk.gov.tr" };
 
 const KAYNAKLAR = {
   makbuz: [GVK, GIB],
