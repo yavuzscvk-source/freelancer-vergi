@@ -8,6 +8,8 @@ const ARACLAR = {
   sirket: { href: "/sahis-mi-limited-mi", ad: "Şahıs şirketi mi limited mi?" },
   kdv: { href: "/kdv-hesaplama", ad: "KDV hesaplama" },
   ihracat: { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışına hizmet: %100 vergi indirimi" },
+  maliyet: { href: "/sahis-sirketi-maliyeti", ad: "Şahıs şirketi aylık maliyeti" },
+
 };
 
 const GVK = { ad: "193 sayılı Gelir Vergisi Kanunu (GİB)", url: "https://www.gib.gov.tr/mevzuat/kanun/433" };
