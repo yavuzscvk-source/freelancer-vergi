@@ -17,6 +17,10 @@ export default function sitemap() {
     { url: `${SITE_URL}/saatlik-ucret-hesaplama`, lastModified: new Date() },
     { url: `${SITE_URL}/upwork-vergi-hesaplama`, lastModified: new Date() },
     { url: `${SITE_URL}/fiverr-vergi-hesaplama`, lastModified: new Date() },
+    { url: `${SITE_URL}/hesaplayicilar`, lastModified: new Date() },
+    { url: `${SITE_URL}/kullanim-kosullari`, lastModified: new Date() },
+    { url: `${SITE_URL}/sorumluluk-reddi`, lastModified: new Date() },
+    { url: `${SITE_URL}/cerez-politikasi`, lastModified: new Date() },
 
   ];
 }
