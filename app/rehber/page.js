@@ -11,6 +11,10 @@ const YAZILAR = [
   { href: "/rehber/freelancer-vergi-oder-mi", ad: "Freelancer vergi öder mi, şirket kurmak zorunda mı?", not: "Arızi kazanç, süreklilik ölçütü ve mükellefiyet." },
   { href: "/rehber/fatura-mi-makbuz-mu", ad: "Freelancer fatura mı makbuz mu keser?", not: "Serbest meslek makbuzu ile fatura arasındaki fark." },
   { href: "/rehber/yurt-disindan-gelen-para", ad: "Yurt dışından para gelirse vergi ödenir mi?", not: "Dünya geliri, hizmet ihracatı ve KDV istisnası." },
+  { href: "/rehber/gecici-vergi-nedir", ad: "Geçici vergi nedir, ne zaman ödenir?", not: "Dönemler, oran ve yıllık beyannamede mahsup." },
+  { href: "/rehber/e-smm-nasil-kesilir", ad: "e-Serbest meslek makbuzu nasıl kesilir?", not: "Tahsilat zamanı, stopaj ve sık yapılan hatalar." },
+  { href: "/rehber/yazilimci-sahis-sirketi", ad: "Yazılımcı şahıs şirketi açmalı mı?", not: "Maliyet, avantajlar ve doğru zamanlama." },
+
 ];
 
 export default function Rehber() {
