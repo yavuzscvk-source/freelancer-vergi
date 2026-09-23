@@ -16,9 +16,9 @@ const GRUPLAR = [
       { href: "/net-gelir-hesaplama", ad: "Net gelir hesaplama", not: "Vergi ve primden sonra cebinize kalan." },
       { href: "/saatlik-ucret-hesaplama", ad: "Saatlik ücret hesaplama", not: "Hedef gelirinize göre taban saat ücreti." },
       { href: "/kdv-hesaplama", ad: "KDV hesaplama", not: "KDV ekleme ve ayırma." },
-     {
-        ad: "İçerik üreticileri",
-        araclar: [
+  {
+    ad: "İçerik üreticileri",
+    araclar: [
       { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi", not: "İstisna, %15 stopaj ve sınır kontrolü." },
       { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok, Twitch", not: "Sosyal medya kazancının vergisi." },
     ],
@@ -27,8 +27,8 @@ const GRUPLAR = [
     ],
   },
   {
-    ad: "Yurt dışı ve platformlar",
-    araclar: [
+   ad: "Yurt dışı ve platformlar",
+   araclar: [
       { href: "/hizmet-ihracati-vergi-indirimi", ad: "Hizmet ihracatı %100 indirim", not: "Yurt dışına yazılım, tasarım, mühendislik." },
       { href: "/upwork-vergi-hesaplama", ad: "Upwork vergi hesaplama", not: "Komisyon, kur ve vergi sonrası kazanç." },
       { href: "/fiverr-vergi-hesaplama", ad: "Fiverr vergi hesaplama", not: "%20 komisyon sonrası net kazanç." },
