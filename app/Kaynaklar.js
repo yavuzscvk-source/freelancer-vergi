@@ -33,6 +33,8 @@ const KAYNAKLAR = {
   maliyet: [SGK, GVK],
   net: [GVK, SGK, TARIFE],
   saatlik: [GVK, SGK],
+  upwork: [KARAR, GVK, SGK],
+  fiverr: [KARAR, GVK, SGK],
 
 };
 
