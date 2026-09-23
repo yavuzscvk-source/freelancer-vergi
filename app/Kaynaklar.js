@@ -25,6 +25,7 @@ const REHBERLER = {
   rehberYurtdisi: { href: "/rehber/yurt-disindan-gelen-para", ad: "Yurt dışından para gelirse vergi ödenir mi?" },
   rehberGecici: { href: "/rehber/gecici-vergi-nedir", ad: "Geçici vergi nedir, ne zaman ödenir?" },
   rehberSirket: { href: "/rehber/yazilimci-sahis-sirketi", ad: "Yazılımcı şahıs şirketi açmalı mı?" },
+  rehberSenaryo: { href: "/rehber/upwork-50-bin-dolar-vergi", ad: "Upwork'ten 50.000 dolar kazanırsam ne kadar vergi öderim?" },
 
 };
 
@@ -54,6 +55,7 @@ const KAYNAKLAR = {
   rehberYurtdisi: [KARAR, GVK, MEVZUAT],
   rehberGecici: [GVK, MEVZUAT, GIB],
   rehberSirket: [GVK, SGK, KARAR],
+  rehberSenaryo: [KARAR, GVK, SGK],
 
 };
 
