@@ -17,7 +17,7 @@ const MENU = [
   { href: "/sahis-mi-limited-mi", ad: "Şahıs / Limited" },
   { href: "/kdv-hesaplama", ad: "KDV" },
   { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışı" },
-  { href: "/sahis-sirketi-maliyeti", ad: "Şirket maliyeti" },
+  { href: "/sahis-sirketi-maliyeti", ad: "Şirket maliyeti" },   { href: "/net-gelir-hesaplama", ad: "Net gelir" },
 
 ];
 
