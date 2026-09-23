@@ -139,6 +139,8 @@ export default function Kaynaklar({ sayfa }) {
           hukuki danışmanlık hizmeti sunmamaktadır.
         </p>
       </div>
+         <Ortaklar />
+
     </>
   );
 }
