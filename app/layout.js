@@ -32,6 +32,8 @@ export const metadata = {
     template: "%s | Freelancer Vergi",
   },
   description: "Serbest çalışanlar için vergi hesaplama araçları.",
+  verification: { yandex: "03bfec3ddf68d2cc" },
+
   openGraph: {
     siteName: "Freelancer Vergi",
     locale: "tr_TR",
