@@ -17,6 +17,8 @@ const MENU = [
   { href: "/sahis-mi-limited-mi", ad: "Şahıs / Limited" },
   { href: "/kdv-hesaplama", ad: "KDV" },
   { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışı" },
+  { href: "/sahis-sirketi-maliyeti", ad: "Şirket maliyeti" },
+
 ];
 
 const menuKutu = { maxWidth: 680, margin: "0 auto", padding: "0 20px 12px", display: "flex", gap: 18, overflowX: "auto", whiteSpace: "nowrap" };
