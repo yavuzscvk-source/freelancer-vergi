@@ -11,6 +11,8 @@ const ARACLAR = {
   maliyet: { href: "/sahis-sirketi-maliyeti", ad: "Şahıs şirketi aylık maliyeti" },
   net: { href: "/net-gelir-hesaplama", ad: "Freelancer net gelir hesaplama" },
   saatlik: { href: "/saatlik-ucret-hesaplama", ad: "Freelancer saatlik ücret hesaplama" },
+  upwork: { href: "/upwork-vergi-hesaplama", ad: "Upwork vergi hesaplama" },
+  fiverr: { href: "/fiverr-vergi-hesaplama", ad: "Fiverr vergi hesaplama" },
 
 };
 
