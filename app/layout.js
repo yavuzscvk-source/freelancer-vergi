@@ -19,6 +19,7 @@ const MENU = [
   { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışı" },
   { href: "/sahis-sirketi-maliyeti", ad: "Şirket maliyeti" },  
   { href: "/net-gelir-hesaplama", ad: "Net gelir" },
+  { href: "/saatlik-ucret-hesaplama", ad: "Saatlik ücret" },
 
 ];
 
