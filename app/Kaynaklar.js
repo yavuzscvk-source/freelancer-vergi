@@ -9,6 +9,7 @@ const ARACLAR = {
   kdv: { href: "/kdv-hesaplama", ad: "KDV hesaplama" },
   ihracat: { href: "/hizmet-ihracati-vergi-indirimi", ad: "Yurt dışına hizmet: %100 vergi indirimi" },
   maliyet: { href: "/sahis-sirketi-maliyeti", ad: "Şahıs şirketi aylık maliyeti" },
+  net: { href: "/net-gelir-hesaplama", ad: "Freelancer net gelir hesaplama" },
 
 };
 
