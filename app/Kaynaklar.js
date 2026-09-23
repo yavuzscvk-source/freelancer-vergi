@@ -112,7 +112,7 @@ export default function Kaynaklar({ sayfa }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(veri) }}
         />
       )}
-
+      <ReklamAlani />
       <h2>Bunlar da işinize yarayabilir</h2>
       <ul className="tools">
         {digerleri.map((a) => (
