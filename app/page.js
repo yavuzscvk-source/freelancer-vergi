@@ -53,6 +53,7 @@ export default function Home() {
         ))}
       </ul>
       <p><Link href="/hesaplayicilar">Tüm hesaplama araçlarını görün</Link></p>
+      <p><Link href="/rehber">Vergi rehberindeki soru-cevap yazılarına bakın</Link></p>
 
     </>
   );
