@@ -4,21 +4,21 @@ import Kaynaklar from "../Kaynaklar";
 import { sayfa } from "../../lib/seo";
 
 export const metadata = sayfa({
-  baslik: "Instagram ve TikTok Gelir Vergisi Hesaplama 2026",
-  aciklama: "Instagram, TikTok ve Twitch gelirlerinin vergisini hesaplayın. Sosyal içerik üreticiliği istisnası, 5.300.000 TL sınırı ve %15 stopaj.",
+  baslik: "Instagram, TikTok ve Kick Gelir Vergisi Hesaplama 2026",
+  aciklama: "Instagram, TikTok ve Kick gelirlerinin vergisini hesaplayın. Sosyal içerik üreticiliği istisnası, 5.300.000 TL sınırı ve %15 stopaj.",
   yol: "/instagram-vergi-hesaplama",
 });
 
 export default function Instagram() {
   return (
     <>
-      <h1>Instagram, TikTok ve Twitch gelir vergisi 2026</h1>
+      <h1>Instagram, TikTok ve Kick gelir vergisi 2026</h1>
       <p>Sosyal medya kazancınızı girin; istisna kapsamında olup olmadığınızı ve ödeyeceğiniz vergiyi görün.</p>
 
       <IcerikHesaplayici platform="sosyal medya" />
 
       <h2>Hangi platformlar kapsamda?</h2>
-      <p>İstisna, sosyal ağ sağlayıcıları üzerinden içerik üreterek kazanç elde edenleri kapsar. Instagram, TikTok, Twitch, Facebook ve X gibi platformlardan elde edilen reklam, sponsorluk, bağış ve benzeri kazançlar bu kapsamda değerlendirilir. Mobil uygulama geliştiricilerinin uygulama platformlarından elde ettiği kazançlar da aynı madde kapsamındadır.</p>
+      <p>İstisna, sosyal ağ sağlayıcıları üzerinden içerik üreterek kazanç elde edenleri kapsar. Instagram, TikTok, Kick, YouTube, Facebook ve X gibi platformlardan elde edilen reklam, sponsorluk, bağış ve benzeri kazançlar bu kapsamda değerlendirilir. Mobil uygulama geliştiricilerinin uygulama platformlarından elde ettiği kazançlar da aynı madde kapsamındadır.</p>
 
       <h2>Reklam veren stopaj keser mi?</h2>
       <p>Bir özelgeye göre, kazancı mükerrer 20/B kapsamında vergilendirilen sosyal içerik üreticisine yapılan reklam ödemesinden ayrıca gelir vergisi stopajı yapılmaz; vergi banka tarafından hasılat üzerinden kesilir. Bu hizmet ayrıca KDV'den de istisnadır.</p>
