@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL } from "../lib/site";
 import "./globals.css";
+import { ADSENSE_ID } from "../lib/reklam";
 
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
@@ -72,6 +73,14 @@ export default function RootLayout({ children }) {
         </footer>
         <Analytics />
       </body>
+                 {ADSENSE_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
+
           <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
