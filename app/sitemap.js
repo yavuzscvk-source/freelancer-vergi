@@ -21,6 +21,8 @@ export default function sitemap() {
     { url: `${SITE_URL}/kullanim-kosullari`, lastModified: new Date() },
     { url: `${SITE_URL}/sorumluluk-reddi`, lastModified: new Date() },
     { url: `${SITE_URL}/cerez-politikasi`, lastModified: new Date() },
+    { url: `${SITE_URL}/youtube-vergi-hesaplama`, lastModified: new Date() },
+    { url: `${SITE_URL}/instagram-vergi-hesaplama`, lastModified: new Date() },
 
   ];
 }
