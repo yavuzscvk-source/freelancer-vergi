@@ -16,6 +16,14 @@ const GRUPLAR = [
       { href: "/net-gelir-hesaplama", ad: "Net gelir hesaplama", not: "Vergi ve primden sonra cebinize kalan." },
       { href: "/saatlik-ucret-hesaplama", ad: "Saatlik ücret hesaplama", not: "Hedef gelirinize göre taban saat ücreti." },
       { href: "/kdv-hesaplama", ad: "KDV hesaplama", not: "KDV ekleme ve ayırma." },
+     {
+        ad: "İçerik üreticileri",
+        araclar: [
+      { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi", not: "İstisna, %15 stopaj ve sınır kontrolü." },
+      { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok, Twitch", not: "Sosyal medya kazancının vergisi." },
+    ],
+  },
+
     ],
   },
   {
