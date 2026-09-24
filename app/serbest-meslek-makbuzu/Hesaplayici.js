@@ -47,6 +47,19 @@ export default function Hesaplayici() {
         <div className="row"><span>KDV ({oranYazi(KDV_ORANI)})</span><span>{tl(kdv)}</span></div>
         <div className="row total"><span>Tahsil edilecek</span><span>{tl(tahsil)}</span></div>
       </div>
-    </div>
+         <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          {mod === "net" && (
+            <li>Net tutar {oranYazi(1 - stopajOrani)} orana bölünerek brüt bulundu: {tl(girilen)} ÷ {(1 - stopajOrani).toLocaleString("tr-TR")} = <b>{tl(brut)}</b></li>
+          )}
+          <li>Stopaj = brüt × {oranYazi(STOPAJ_ORANI)}: {tl(brut)} × {STOPAJ_ORANI.toLocaleString("tr-TR")} = <b>{tl(stopaj)}</b>{!stopajVar && " (stopaj kapalı)"}</li>
+          <li>Net tutar = brüt − stopaj: {tl(brut)} − {tl(stopaj)} = <b>{tl(net)}</b></li>
+          <li>KDV = brüt × {oranYazi(KDV_ORANI)}: {tl(brut)} × {KDV_ORANI.toLocaleString("tr-TR")} = <b>{tl(kdv)}</b>{!kdvVar && " (KDV kapalı)"}</li>
+          <li>Tahsil edilecek = net + KDV: {tl(net)} + {tl(kdv)} = <b>{tl(tahsil)}</b></li>
+        </ol>
+      </details>
+
+   </div>
   );
 }
