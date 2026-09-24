@@ -105,3 +105,8 @@ input[type="text"]:focus { border-color: var(--link); outline: none; box-shadow:
 .footer { margin-top: 48px; background: var(--paper); border-top: 1px solid var(--line); }
 .footer-inner { font-size: 0.85rem; color: var(--muted); }
 .footer nav a { color: var(--ink); font-weight: 600; text-decoration: none; }
+.nasil { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 12px; }
+.nasil summary { font-weight: 700; font-size: 0.95rem; cursor: pointer; }
+.nasil ol { margin: 12px 0 0; padding-left: 20px; color: var(--muted); font-size: 0.95rem; }
+.nasil li { margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+.nasil b { color: var(--ink); font-weight: 700; }
