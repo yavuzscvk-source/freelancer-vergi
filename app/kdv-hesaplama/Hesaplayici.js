@@ -43,6 +43,19 @@ export default function Hesaplayici() {
         <div className="row"><span>KDV (%{oran})</span><span>{tl(kdv)}</span></div>
         <div className="row total"><span>KDV dahil tutar</span><span>{tl(dahil)}</span></div>
       </div>
+        <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          {mod === "ekle" ? (
+            <li>Girilen tutar KDV hariç kabul edildi: <b>{tl(haric)}</b></li>
+          ) : (
+            <li>KDV dahil tutar 1 + oran değerine bölünerek hariç tutar bulundu: {tl(girilen)} ÷ {(1 + r).toLocaleString("tr-TR")} = <b>{tl(haric)}</b></li>
+          )}
+          <li>KDV = hariç tutar × %{oran}: {tl(haric)} × {r.toLocaleString("tr-TR")} = <b>{tl(kdv)}</b></li>
+          <li>KDV dahil tutar = hariç + KDV: {tl(haric)} + {tl(kdv)} = <b>{tl(dahil)}</b></li>
+        </ol>
+      </details>
+
     </div>
   );
 }
