@@ -65,6 +65,19 @@ export default function Hesaplayici() {
         <div className="row"><span>Cebinize kalan</span><span>{tl(aylikNet)}</span></div>
         <div className="row"><span>Toplam yük (gider + prim + vergi)</span><span>{yuzde(yuk)}</span></div>
       </div>
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Yıllık kazanç = (aylık gelir − aylık gider) × 12: ({tl(aylikGelir)} − {tl(aylikGider)}) × 12 = <b>{tl(yillikKazanc)}</b></li>
+          <li>Bağ-Kur primi = aylık {tl(aylikPrim)} × 12 = <b>{tl(yillikPrim)}</b></li>
+          <li>Prim düşülmüş tutar: {tl(yillikKazanc)} − {tl(yillikPrim)} = <b>{tl(primSonrasi)}</b></li>
+          {genc && <li>Genç girişimci istisnası düşüldü: <b>{tl(istisna)}</b></li>}
+          <li>Matraha 2026 tarifesi uygulandı: <b>{tl(vergi)}</b></li>
+          <li>Yıllık net = kazanç − prim − vergi: {tl(yillikKazanc)} − {tl(yillikPrim)} − {tl(vergi)} = <b>{tl(yillikNet)}</b></li>
+          <li>Aylık ortalama = yıllık net ÷ 12: <b>{tl(aylikNet)}</b></li>
+        </ol>
+      </details>
+
 
       <p className="muted" style={{ marginTop: 12 }}>
         Bağ-Kur primi alt sınırdan (asgari ücret üzerinden) hesaplanmıştır. Daha yüksek kazanç
