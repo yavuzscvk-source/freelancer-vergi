@@ -26,6 +26,8 @@ const REHBERLER = {
   rehberGecici: { href: "/rehber/gecici-vergi-nedir", ad: "Geçici vergi nedir, ne zaman ödenir?" },
   rehberSirket: { href: "/rehber/yazilimci-sahis-sirketi", ad: "Yazılımcı şahıs şirketi açmalı mı?" },
   rehberSenaryo: { href: "/rehber/upwork-50-bin-dolar-vergi", ad: "Upwork'ten 50.000 dolar kazanırsam ne kadar vergi öderim?" },
+  rehberFiverr: { href: "/rehber/fiverr-2000-dolar-vergi", ad: "Fiverr'dan ayda 2.000 dolar kazanırsam ne kadar vergi öderim?" },
+  rehberYoutube: { href: "/rehber/youtube-1-milyon-tl-vergi", ad: "YouTube'dan yılda 1,2 milyon TL kazanırsam?" },
 
 };
 
@@ -56,6 +58,8 @@ const KAYNAKLAR = {
   rehberGecici: [GVK, MEVZUAT, GIB],
   rehberSirket: [GVK, SGK, KARAR],
   rehberSenaryo: [KARAR, GVK, SGK],
+  rehberFiverr: [KARAR, GVK, SGK],
+  rehberYoutube: [GVK, MEVZUAT, TARIFE],
 
 };
 
