@@ -3,7 +3,8 @@ import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL } from "../lib/site";
 import "./globals.css";
-import { ADSENSE_ID } from "../lib/reklam";
+import { ADSENSE_ID, GOOGLE_ADS_ID } from "../lib/reklam";
+import Script from "next/script";
 
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
