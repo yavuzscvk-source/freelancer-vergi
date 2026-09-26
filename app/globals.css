@@ -56,7 +56,8 @@ p { margin: 0 0 14px; }
 .tool-link strong { color: var(--link); }
 
 label { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
-input[type="text"] {
+input[type="text"], input[type="date"] {
+
   width: 100%;
   font: inherit;
   font-size: 1.15rem;
@@ -68,7 +69,8 @@ input[type="text"] {
   background: var(--paper);
   color: var(--ink);
 }
-input[type="text"]:focus { border-color: var(--link); outline: none; box-shadow: 0 0 0 3px rgba(31, 79, 163, 0.2); }
+input[type="text"]:focus, input[type="date"]:focus {
+
 
 .toggle { display: flex; gap: 6px; padding: 4px; background: var(--page); border-radius: 12px; margin-bottom: 18px; }
 .toggle button { flex: 1; padding: 10px; font: inherit; font-size: 0.95rem; font-weight: 700; border: 0; background: transparent; border-radius: 9px; color: var(--muted); }
