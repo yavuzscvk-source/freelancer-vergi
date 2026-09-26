@@ -14,7 +14,8 @@ export default function CerezPolitikasi() {
       <p className="muted">Son güncelleme: Eylül 2026</p>
 
       <h2>Şu anda çerez kullanılıyor mu?</h2>
-      <p>Hayır. Bu sitede reklam, profilleme veya takip amaçlı çerez kullanılmamaktadır. Hesaplama araçlarına girdiğiniz veriler yalnızca tarayıcınızda işlenir, saklanmaz ve sunucuya gönderilmez.</p>
+      <p>Sitede reklam ölçümlemesi için Google reklam etiketi kullanılmaktadır ve bu etiket çerez yerleştirebilir. Hesaplama araçlarına girdiğiniz tutarlar ise yalnızca tarayıcınızda işlenir; sunucuya gönderilmez ve saklanmaz.</p>
+
 
       <h2>Ziyaret istatistikleri</h2>
       <p>Sitenin nasıl kullanıldığını anlamak için Vercel Web Analytics kullanılır. Bu hizmet çerez kullanmaz ve sizi kişisel olarak tanımlayacak bilgi toplamaz; yalnızca sayfa görüntüleme, ülke ve cihaz türü gibi toplu veriler görülür.</p>
