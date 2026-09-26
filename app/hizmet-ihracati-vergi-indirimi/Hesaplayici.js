@@ -59,6 +59,19 @@ export default function Hesaplayici() {
         <div className="row" style={{ fontWeight: 700 }}><span>Vergi avantajınız</span><span>{tl(avantaj)}</span></div>
         <div className="row total"><span>Ödenecek gelir vergisi</span><span>{tl(vergi)}</span></div>
       </div>
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Toplam kazanç = yurt dışı + yurt içi: {tl(dis)} + {tl(ic)} = <b>{tl(dis + ic)}</b></li>
+          <li>{sartlar
+            ? `Üç şart da sağlandığı için yurt dışı kazancın ${oranYazi(ORAN)}'ü indirildi: ${tl(dis)} × ${ORAN.toLocaleString("tr-TR")}`
+            : "Şartlardan biri eksik olduğu için indirim uygulanmadı"} = <b>{tl(indirim)}</b></li>
+          <li>Matrah = toplam kazanç − indirim: {tl(dis + ic)} − {tl(indirim)} = <b>{tl(matrah)}</b></li>
+          <li>Matraha 2026 gelir vergisi tarifesi uygulandı: <b>{tl(vergi)}</b></li>
+          <li>Avantaj = indirimsiz vergi − ödenecek vergi: {tl(indirimsizVergi)} − {tl(vergi)} = <b>{tl(avantaj)}</b></li>
+        </ol>
+      </details>
+
 
       {!sartlar && (
         <p className="muted" style={{ marginTop: 12 }}>
