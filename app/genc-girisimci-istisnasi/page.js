@@ -17,6 +17,8 @@ export default function GencGirisimci() {
       <p>Yıllık kazancınızı girin; genç girişimci istisnasıyla ne kadar vergi ödeyeceğinizi ve ne kadar avantaj sağladığınızı görün.</p>
 
       <Hesaplayici />
+      <h2>Genç girişimci istisnası kaç yaşına kadar?</h2>
+      <p>İşe başlama tarihinde 18 yaşını doldurmuş ve 29 yaşını doldurmamış olmak gerekir. Belirleyici olan bugünkü yaşınız değil, mükellefiyetin açıldığı tarihteki yaşınızdır. Örneğin 28 yaşında işe başlayan biri, sonraki yıllarda 30 yaşına gelse bile üç vergilendirme dönemi boyunca istisnadan yararlanmaya devam eder. Yukarıdaki yaş ve süre kontrolü bölümünden kendi durumunuzu görebilirsiniz.</p>
 
       <h2>2026 genç girişimci istisnası ne kadar?</h2>
       <p>2026 yılı için istisna tutarı 400.000 TL'dir. Bu tutar, gelir vergisi tarifesinin ikinci dilimine eşittir ve her yıl güncellenir. Yıllık kazancınızın 400.000 TL'ye kadar olan kısmı için gelir vergisi ödemezsiniz. İstisna, işe başladığınız yıldan itibaren 3 vergilendirme dönemi boyunca uygulanır.</p>
