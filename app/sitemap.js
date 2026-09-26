@@ -33,6 +33,8 @@ export default function sitemap() {
     { url: `${SITE_URL}/rehber/upwork-50-bin-dolar-vergi`, lastModified: new Date() },
     { url: `${SITE_URL}/rehber/fiverr-2000-dolar-vergi`, lastModified: new Date() },
     { url: `${SITE_URL}/rehber/youtube-1-milyon-tl-vergi`, lastModified: new Date() },
+    { url: `${SITE_URL}/rehber/yurt-ici-musteri-100-bin-tl`, lastModified: new Date() },
+    { url: `${SITE_URL}/rehber/hangi-giderler-yazilabilir`, lastModified: new Date() },
 
   ];
 }
