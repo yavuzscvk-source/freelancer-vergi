@@ -77,6 +77,18 @@ export default function RootLayout({ children }) {
         <Analytics />
       </body>
                  {ADSENSE_ID && (
+               {GOOGLE_ADS_ID && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
+            <Script id="google-ads" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}');`}
+            </Script>
+          </>
+        )}
+ 
           <script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
