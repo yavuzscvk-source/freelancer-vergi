@@ -74,6 +74,19 @@ export default function Hesaplayici() {
           <span>{tl(fark)}</span>
         </div>
       )}
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Şahıs matrahı = kâr {genc ? `− 400.000 TL istisna: ${tl(k)} − ${tl(Math.min(k, GENC))}` : ""} = <b>{tl(sahisMatrah)}</b></li>
+          <li>Matraha 2026 gelir vergisi tarifesi uygulandı: <b>{tl(sahisVergi)}</b></li>
+          <li>Kurumlar vergisi = kâr × {oranYazi(KV)}: {tl(k)} × {KV.toLocaleString("tr-TR")} = <b>{tl(kv)}</b></li>
+          <li>Dağıtılan kâr = (kâr − kurumlar vergisi) × %{dagitim}: {tl(k - kv)} × {(dagitim / 100).toLocaleString("tr-TR")} = <b>{tl(dagitilan)}</b></li>
+          <li>Kâr payı stopajı = dağıtılan × {oranYazi(STOPAJ)}: {tl(dagitilan)} × {STOPAJ.toLocaleString("tr-TR")} = <b>{tl(stopaj)}</b></li>
+          <li>Limited toplam vergi = kurumlar vergisi + stopaj: {tl(kv)} + {tl(stopaj)} = <b>{tl(limitedVergi)}</b></li>
+          <li>Fark = iki vergi arasındaki tutar: <b>{tl(fark)}</b></li>
+        </ol>
+      </details>
+
 
       <p className="muted" style={{ marginTop: 12 }}>
         Limited şirketten maaş veya huzur hakkı alınması ve yüksek tutarlı kâr paylarının yıllık beyanı bu hesaba dahil değildir.
