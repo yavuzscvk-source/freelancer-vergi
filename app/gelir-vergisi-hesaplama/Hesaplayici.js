@@ -48,6 +48,16 @@ export default function Hesaplayici() {
           <span>{tl(Math.abs(fark))}</span>
         </div>
       </div>
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Matrah = kazanç − giderler: {tl(sayiyaCevir(gelir))} − {tl(sayiyaCevir(gider))} = <b>{tl(matrah)}</b></li>
+          <li>Matrah dilimlere bölündü, her dilime kendi oranı uygulandı (ayrıntı aşağıdaki tabloda): <b>{tl(toplam)}</b></li>
+          <li>Efektif oran = vergi ÷ matrah: {tl(toplam)} ÷ {tl(matrah)} = <b>{yuzde(efektif)}</b></li>
+          <li>Mahsup = stopaj + geçici vergi: {tl(sayiyaCevir(stopaj))} + {tl(sayiyaCevir(gecici))} = <b>{tl(mahsup)}</b></li>
+          <li>{fark >= 0 ? "Ödenecek" : "İade edilebilecek"} = vergi − mahsup: {tl(toplam)} − {tl(mahsup)} = <b>{tl(Math.abs(fark))}</b></li>
+        </ol>
+      </details>
 
       {detay.length > 0 && (
         <div style={{ marginTop: 16 }}>
