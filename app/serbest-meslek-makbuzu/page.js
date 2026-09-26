@@ -3,8 +3,8 @@ import { sayfa } from "../../lib/seo";
 import Kaynaklar from "../Kaynaklar";
 
 export const metadata = sayfa({
-  baslik: "Serbest Meslek Makbuzu Hesaplama 2026",
-  aciklama: "Brüt veya net tutardan serbest meslek makbuzu stopajı, KDV ve tahsil edilecek tutarı saniyeler içinde hesaplayın.",
+  baslik: "Serbest Meslek Makbuzu Hesaplama 2026 (Netten Brüte Stopaj)",
+  aciklama: "Brüt veya net tutardan serbest meslek makbuzu stopajını, KDV'yi ve tahsil edilecek tutarı hesaplayın. Netten brüte stopaj hesaplama dahil.",
   yol: "/serbest-meslek-makbuzu",
 });
 
