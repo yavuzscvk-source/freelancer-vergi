@@ -25,7 +25,8 @@ export default function SerbestMeslekMakbuzu() {
       <p>Brüt 10.000 TL'lik bir işte stopaj 2.000 TL, net tutar 8.000 TL, KDV 2.000 TL olur. Karşı taraf size 8.000 + 2.000 = 10.000 TL öder, 2.000 TL stopajı ise vergi dairesine yatırır.</p>
 
       <h2>Netten brüte nasıl hesaplanır?</h2>
-      <p>Elinize belirli bir net tutar geçmesini istiyorsanız, net tutarı 0,80'e bölerek brüt tutarı bulabilirsiniz. Örneğin 8.000 TL net için brüt tutar 10.000 TL'dir.</p>
+      <p>Netten brüte stopaj hesaplama, net tutarın 0,80'e bölünmesiyle yapılır. Çünkü brüt tutardan %20 stopaj kesilince geriye %80'i kalır. Örneğin elinize 8.000 TL net geçmesini istiyorsanız brüt tutar 8.000 ÷ 0,80 = 10.000 TL olmalıdır; bu durumda stopaj 2.000 TL olur. Hesaplayıcıda "Netten hesapla" seçeneğine basarak istediğiniz net tutarı girmeniz yeterlidir.</p>
+
 
       <h2>Stopaj her zaman kesilir mi?</h2>
       <p>Hayır. Stopajı, vergi kesintisi yapmakla yükümlü olan şirketler ve kurumlar keser. Bireysel bir müşteriye kestiğiniz makbuzda genellikle stopaj olmaz; bu durumda stopaj kutusunun işaretini kaldırın.</p>
