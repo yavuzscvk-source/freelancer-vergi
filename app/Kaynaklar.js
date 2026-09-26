@@ -28,6 +28,8 @@ const REHBERLER = {
   rehberSenaryo: { href: "/rehber/upwork-50-bin-dolar-vergi", ad: "Upwork'ten 50.000 dolar kazanırsam ne kadar vergi öderim?" },
   rehberFiverr: { href: "/rehber/fiverr-2000-dolar-vergi", ad: "Fiverr'dan ayda 2.000 dolar kazanırsam ne kadar vergi öderim?" },
   rehberYoutube: { href: "/rehber/youtube-1-milyon-tl-vergi", ad: "YouTube'dan yılda 1,2 milyon TL kazanırsam?" },
+  rehberYurtIci: { href: "/rehber/yurt-ici-musteri-100-bin-tl", ad: "Yurt içi müşteriye 100.000 TL'lik iş yaptım, elime ne geçer?" },
+  rehberGider: { href: "/rehber/hangi-giderler-yazilabilir", ad: "Freelancer hangi harcamaları gider yazabilir?" },
 
 };
 
@@ -60,6 +62,8 @@ const KAYNAKLAR = {
   rehberSenaryo: [KARAR, GVK, SGK],
   rehberFiverr: [KARAR, GVK, SGK],
   rehberYoutube: [GVK, MEVZUAT, TARIFE],
+  rehberYurtIci: [GVK, TARIFE, SGK],
+  rehberGider: [GVK, MEVZUAT, GIB],
 
 };
 
