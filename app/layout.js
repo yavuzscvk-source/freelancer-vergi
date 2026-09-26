@@ -74,10 +74,17 @@ export default function RootLayout({ children }) {
             Bu sitedeki hesaplamalar bilgilendirme amaçlıdır. Kesin sonuç için mali müşavirinize danışın.
           </div>
         </footer>
-        <Analytics />
-      </body>
-                 {ADSENSE_ID && (
-               {GOOGLE_ADS_ID && (
+               <Analytics />
+
+        {ADSENSE_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
+
+        {GOOGLE_ADS_ID && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
             <Script id="google-ads" strategy="afterInteractive">
@@ -88,37 +95,7 @@ gtag('config', '${GOOGLE_ADS_ID}');`}
             </Script>
           </>
         )}
- 
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
-            crossOrigin="anonymous"
-          />
-        )}
-
-          <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                name: "Freelancer Vergi",
-                url: SITE_URL,
-                inLanguage: "tr-TR",
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "Freelancer Vergi",
-                url: SITE_URL,
-                logo: SITE_URL + "/icon.svg",
-                email: "freelancervergi@gmail.com",
-              },
-            ]),
-          }}
-        />
-
+      </body>
     </html>
   );
 }
