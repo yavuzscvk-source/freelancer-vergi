@@ -99,6 +99,22 @@ export default function PlatformHesaplayici({ platform, varsayilanKomisyon }) {
         <div className="row total"><span>Yıllık net</span><span>{tl(netYillik)}</span></div>
         <div className="row"><span>Aylık ortalama net</span><span>{tl(netYillik / 12)}</span></div>
       </div>
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Yıllık brüt = aylık × 12: <b>${yillikUsd.toLocaleString("tr-TR")}</b></li>
+          <li>{platform} komisyonu = brüt × %{sayiyaCevir(komisyon)}: <b>${komisyonUsd.toLocaleString("tr-TR", { maximumFractionDigits: 0 })}</b></li>
+          <li>Elinize geçen döviz = brüt − komisyon − masraflar: <b>${netUsd.toLocaleString("tr-TR", { maximumFractionDigits: 0 })}</b></li>
+          <li>TL karşılığı = döviz × kur: {kurDeger.toLocaleString("tr-TR")} kuruyla <b>{tl(gelirTl)}</b></li>
+          <li>Kazanç = TL geliri − diğer giderler: {tl(gelirTl)} − {tl(yillikGider)} = <b>{tl(kazanc)}</b></li>
+          <li>Bağ-Kur primi düşüldü: <b>{tl(yillikPrim)}</b></li>
+          {ihracat && <li>Hizmet ihracatı indirimi uygulandı: <b>{tl(ihracatIndirimi)}</b></li>}
+          {genc && <li>Genç girişimci istisnası düşüldü: <b>{tl(gencIstisnasi)}</b></li>}
+          <li>Kalan matraha 2026 tarifesi uygulandı: <b>{tl(vergi)}</b></li>
+          <li>Yıllık net = kazanç − prim − vergi: <b>{tl(netYillik)}</b></li>
+        </ol>
+      </details>
+
 
       <p className="muted" style={{ marginTop: 12 }}>
         Kur farkları, platformun kendi dönüşüm oranı ve ödeme sağlayıcısı kesintileri sonucu değiştirebilir.
