@@ -15,6 +15,8 @@ const YAZILAR = [
   { href: "/rehber/e-smm-nasil-kesilir", ad: "e-Serbest meslek makbuzu nasıl kesilir?", not: "Tahsilat zamanı, stopaj ve sık yapılan hatalar." },
   { href: "/rehber/yazilimci-sahis-sirketi", ad: "Yazılımcı şahıs şirketi açmalı mı?", not: "Maliyet, avantajlar ve doğru zamanlama." },
   { href: "/rehber/upwork-50-bin-dolar-vergi", ad: "Upwork'ten 50.000 dolar kazanırsam ne kadar vergi öderim?", not: "Adım adım örnek hesap ve iki farklı senaryo." },
+  { href: "/rehber/fiverr-2000-dolar-vergi", ad: "Fiverr'dan ayda 2.000 dolar kazanırsam ne kadar vergi öderim?", not: "%20 komisyon sonrası adım adım hesap." },
+  { href: "/rehber/youtube-1-milyon-tl-vergi", ad: "YouTube'dan yılda 1,2 milyon TL kazanırsam?", not: "İçerik üreticiliği istisnası ve sınır aşılırsa ne olur?" },
 
 ];
 
