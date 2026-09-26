@@ -11,6 +11,8 @@ export default function Hesaplayici() {
   const [gider, setGider] = useState("100.000");
   const [stopaj, setStopaj] = useState("0");
   const [gecici, setGecici] = useState("0");
+  const [dogum, setDogum] = useState("");
+  const [baslama, setBaslama] = useState("");
 
   const kazanc = Math.max(0, sayiyaCevir(gelir) - sayiyaCevir(gider));
   const istisnaTutari = Math.min(kazanc, ISTISNA);
@@ -20,6 +22,17 @@ export default function Hesaplayici() {
   const tasarruf = normalVergi - istisnaliVergi;
   const mahsup = sayiyaCevir(stopaj) + sayiyaCevir(gecici);
   const fark = istisnaliVergi - mahsup;
+  const kontrol = (() => {
+    if (!dogum || !baslama) return null;
+    const d = new Date(dogum);
+    const b = new Date(baslama);
+    if (isNaN(d.getTime()) || isNaN(b.getTime()) || b < d) return null;
+    let yas = b.getFullYear() - d.getFullYear();
+    const ayFark = b.getMonth() - d.getMonth();
+    if (ayFark < 0 || (ayFark === 0 && b.getDate() < d.getDate())) yas--;
+    const y = b.getFullYear();
+    return { yas, uygun: yas >= 18 && yas < 29, yillar: `${y}, ${y + 1} ve ${y + 2}` };
+  })();
 
   return (
     <div className="card">
@@ -68,6 +81,36 @@ export default function Hesaplayici() {
           <span>{tl(Math.abs(fark))}</span>
         </div>
       </div>
-    </div>
+         <div style={{ marginTop: 24, borderTop: "1px solid var(--line)", paddingTop: 16 }}>
+        <strong>Yaş ve süre kontrolü</strong>
+        <div className="muted">İşe başlama tarihindeki yaşınıza göre uygunluğunuzu ve istisnanın hangi yıllarda uygulanacağını gösterir.</div>
+
+        <div style={{ marginTop: 12 }}>
+          <label htmlFor="dogum">Doğum tarihiniz</label>
+          <input id="dogum" type="date" value={dogum} onChange={(e) => setDogum(e.target.value)} />
+        </div>
+
+        <div style={{ marginTop: 12 }}>
+          <label htmlFor="baslama">İşe başlama tarihiniz</label>
+          <input id="baslama" type="date" value={baslama} onChange={(e) => setBaslama(e.target.value)} />
+        </div>
+
+        {kontrol && (
+          <div className="results">
+            <div className="row"><span>İşe başlarkenki yaşınız</span><span>{kontrol.yas}</span></div>
+            <div className="row"><span>Yaş şartı (18-29 arası)</span><span>{kontrol.uygun ? "Sağlanıyor" : "Sağlanmıyor"}</span></div>
+            {kontrol.uygun && (
+              <div className="row total"><span>İstisnanın geçerli olduğu yıllar</span><span>{kontrol.yillar}</span></div>
+            )}
+          </div>
+        )}
+
+        <p className="muted" style={{ marginTop: 12 }}>
+          Yaş şartı tek başına yeterli değildir; ilk defa mükellefiyet tesis edilmesi ve işte bizzat
+          çalışılması gibi diğer şartlar da aranır.
+        </p>
+      </div>
+
+  </div>
   );
 }
