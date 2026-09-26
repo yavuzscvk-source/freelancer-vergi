@@ -44,6 +44,18 @@ export default function Hesaplayici() {
       </div>
 
       <div className="results">
+           <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Kazanç = gelir − giderler: {tl(sayiyaCevir(gelir))} − {tl(sayiyaCevir(gider))} = <b>{tl(kazanc)}</b></li>
+          <li>İstisna, kazancı aşamaz. 400.000 TL sınırı ile karşılaştırıldı: <b>{tl(istisnaTutari)}</b></li>
+          <li>Matrah = kazanç − istisna: {tl(kazanc)} − {tl(istisnaTutari)} = <b>{tl(matrah)}</b></li>
+          <li>Matraha 2026 tarifesi uygulandı: <b>{tl(istisnaliVergi)}</b></li>
+          <li>Avantaj = istisnasız vergi − istisnalı vergi: {tl(normalVergi)} − {tl(istisnaliVergi)} = <b>{tl(tasarruf)}</b></li>
+          <li>{fark >= 0 ? "Ödenecek" : "İade edilebilecek"} = vergi − mahsup: {tl(istisnaliVergi)} − {tl(mahsup)} = <b>{tl(Math.abs(fark))}</b></li>
+        </ol>
+      </details>
+
         <div className="row"><span>Yıllık kazanç</span><span>{tl(kazanc)}</span></div>
         <div className="row"><span>Genç girişimci istisnası</span><span>{eksi(istisnaTutari)}</span></div>
         <div className="row"><span>Vergi matrahı</span><span>{tl(matrah)}</span></div>
