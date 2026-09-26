@@ -47,6 +47,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--link); outline-
 
 h1 { font-size: clamp(1.7rem, 6vw, 2.3rem); line-height: 1.15; letter-spacing: -0.02em; font-weight: 800; margin: 20px 0 12px; }
 h2 { font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.01em; font-weight: 700; margin: 36px 0 8px; }
+h3 { font-size: 1.05rem; font-weight: 700; margin: 24px 0 6px; }
 p { margin: 0 0 14px; }
 .lead { font-size: 1.1rem; color: var(--muted); max-width: 34em; }
 .muted { color: var(--muted); font-size: 0.92rem; }
@@ -56,8 +57,8 @@ p { margin: 0 0 14px; }
 .tool-link strong { color: var(--link); }
 
 label { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
-input[type="text"], input[type="date"] {
 
+input[type="text"], input[type="date"] {
   width: 100%;
   font: inherit;
   font-size: 1.15rem;
@@ -69,8 +70,12 @@ input[type="text"], input[type="date"] {
   background: var(--paper);
   color: var(--ink);
 }
-input[type="text"]:focus, input[type="date"]:focus {
 
+input[type="text"]:focus, input[type="date"]:focus {
+  border-color: var(--link);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(31, 79, 163, 0.2);
+}
 
 .toggle { display: flex; gap: 6px; padding: 4px; background: var(--page); border-radius: 12px; margin-bottom: 18px; }
 .toggle button { flex: 1; padding: 10px; font: inherit; font-size: 0.95rem; font-weight: 700; border: 0; background: transparent; border-radius: 9px; color: var(--muted); }
@@ -107,6 +112,7 @@ input[type="text"]:focus, input[type="date"]:focus {
 .footer { margin-top: 48px; background: var(--paper); border-top: 1px solid var(--line); }
 .footer-inner { font-size: 0.85rem; color: var(--muted); }
 .footer nav a { color: var(--ink); font-weight: 600; text-decoration: none; }
+
 .nasil { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 12px; }
 .nasil summary { font-weight: 700; font-size: 0.95rem; cursor: pointer; }
 .nasil ol { margin: 12px 0 0; padding-left: 20px; color: var(--muted); font-size: 0.95rem; }
