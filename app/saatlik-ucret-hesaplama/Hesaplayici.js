@@ -85,6 +85,17 @@ export default function Hesaplayici() {
         <div className="row total"><span>Minimum saatlik ücret</span><span>{tl(saatlik)}</span></div>
         <div className="row"><span>Günlük (8 saat)</span><span>{tl(saatlik * 8)}</span></div>
       </div>
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Yıllık hedef net = aylık hedef × 12: <b>{tl(hedefYillik)}</b></li>
+          <li>Çalışılan hafta = 52 − izin: 52 − {sayiyaCevir(izin)} = <b>{calisilanHafta} hafta</b></li>
+          <li>Faturalanabilir saat = haftalık saat × hafta × oran: {haftalikSaat} × {calisilanHafta} × {faturaOrani.toLocaleString("tr-TR")} = <b>{Math.round(yillikSaat).toLocaleString("tr-TR")} saat</b></li>
+          <li>Hedef nete ulaşmak için gereken ciro, gider, Bağ-Kur ve vergi geri hesaplanarak bulundu: <b>{tl(gerekliCiro)}</b></li>
+          <li>Saatlik ücret = gerekli ciro ÷ faturalanabilir saat: <b>{tl(saatlik)}</b></li>
+        </ol>
+      </details>
+
 
       <p className="muted" style={{ marginTop: 12 }}>
         Bağ-Kur primi alt sınırdan hesaplanmıştır. Bu rakam taban ücrettir; kâr payı, birikim ve
