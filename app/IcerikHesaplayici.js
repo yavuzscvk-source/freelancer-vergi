@@ -73,6 +73,28 @@ export default function IcerikHesaplayici({ platform }) {
           </>
         )}
       </div>
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Brüt hasılat: <b>{tl(brut)}</b></li>
+          <li>Hasılat, istisna sınırı olan {sayi(I.limit)} TL ile karşılaştırıldı ve banka şartı kontrol edildi: <b>{istisnaVar ? "istisna geçerli" : "istisna yok"}</b></li>
+          {istisnaVar ? (
+            <>
+              <li>Banka stopajı = hasılat × {oranYazi(I.stopaj)}: {tl(brut)} × {I.stopaj.toLocaleString("tr-TR")} = <b>{tl(stopaj)}</b></li>
+              <li>Bu kesinti nihai vergidir, beyanname verilmez. Elinize kalan: <b>{tl(brut - stopaj)}</b></li>
+            </>
+          ) : (
+            <>
+              <li>Kazanç = hasılat − giderler: {tl(brut)} − {tl(giderTutar)} = <b>{tl(kazanc)}</b></li>
+              {genc && <li>Genç girişimci istisnası düşüldü: <b>{tl(gencIstisnasi)}</b></li>}
+              <li>Matraha 2026 tarifesi uygulandı: <b>{tl(tarifeVergisi)}</b></li>
+              <li>Kesilmiş stopaj mahsup edildi: {tl(tarifeVergisi)} − {tl(stopaj)} = <b>{tl(odenecek)}</b></li>
+              <li>Elinize kalan = hasılat − gider − toplam vergi: <b>{tl(net)}</b></li>
+            </>
+          )}
+        </ol>
+      </details>
+
 
       {banka && brut > I.limit && (
         <p className="muted" style={{ marginTop: 12 }}>
