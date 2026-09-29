@@ -55,7 +55,7 @@ export default function Hesaplayici() {
         <summary>Bu sonuç nasıl çıktı?</summary>
         <ol>
           <li>Prime esas kazanç, alt ve üst sınır arasına yerleştirildi: <b>{tl(beyan)}</b></li>
-          <li>Bağ-Kur primi = prime esas kazanç × {yuzde(oran * 100)}: {tl(beyan)} × {oran.toLocaleString("tr-TR")} = <b>{tl(prim)}</b></li>
+          <li>Bağ-Kur primi = prime esas kazanç × {yuzde(oran * 100)}: {tl(beyan)} × {oran.toLocaleString("tr-TR", { minimumFractionDigits: 4 })} = <b>{tl(prim)}</b></li>
           <li>Aylık toplam = prim + müşavir + diğer: {tl(prim)} + {tl(musavirTutar)} + {tl(digerTutar)} = <b>{tl(aylik)}</b></li>
           <li>Yıllık toplam = aylık × 12: {tl(aylik)} × 12 = <b>{tl(aylik * 12)}</b></li>
         </ol>
