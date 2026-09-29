@@ -19,6 +19,31 @@ const GRUPLAR = [
     ],
   },
   {
+  {
+    ad: "Yurt dışı ve döviz",
+    araclar: [
+    {
+      href: "/doviz-fatura-tl-karsiligi",
+      ad: "Döviz faturası TL karşılığı",
+      not: "USD, EUR ve GBP faturalarını TL'ye çevirin.",
+    },
+    {
+      href: "/hizmet-ihracati-vergi-indirimi",
+      ad: "Hizmet ihracatı %100 indirim",
+      not: "Yurt dışına yazılım, tasarım, mühendislik.",
+    },
+    {
+      href: "/upwork-vergi-hesaplama",
+      ad: "Upwork vergi hesaplama",
+      not: "Komisyon, kur ve vergi sonrası kazanç.",
+    },
+    {
+      href: "/fiverr-vergi-hesaplama",
+      ad: "Fiverr vergi hesaplama",
+      not: "%20 komisyon sonrası net kazanç.",
+    },
+  ],
+},
     ad: "Yurt dışı ve platformlar",
     araclar: [
       { href: "/hizmet-ihracati-vergi-indirimi", ad: "Hizmet ihracatı %100 indirim", not: "Yurt dışına yazılım, tasarım, mühendislik." },
