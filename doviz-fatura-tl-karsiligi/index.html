@@ -1,1 +1,746 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+  <title>Döviz Faturası TL Karşılığı Hesaplama 2026 | Freelancer Vergi</title>
+
+  <meta name="description" content="Dolar, euro veya sterlin faturanızın TCMB kuru üzerinden TL karşılığını hesaplayın. KDV ve stopaj seçenekleriyle tahmini net tutarı görün.">
+
+  <link rel="canonical" href="https://www.freelancervergi.com.tr/doviz-fatura-tl-karsiligi/">
+
+  <meta property="og:title" content="Döviz Faturası TL Karşılığı Hesaplama 2026">
+  <meta property="og:description" content="Döviz faturasının TL karşılığını, KDV ve stopaj seçenekleriyle hesaplayın.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.freelancervergi.com.tr/doviz-fatura-tl-karsiligi/">
+
+  <meta name="theme-color" content="#0f5c4a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --c: #0f5c4a;
+      --c-soft: #e7f1ee;
+      --ink: #161d22;
+      --soft: #5a656e;
+      --line: #dde2e6;
+      --bg: #f7f8f8;
+      --paper: #ffffff;
+      --danger: #a33a3a;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --c: #5fd3b2;
+        --c-soft: #152b26;
+        --ink: #e8edf0;
+        --soft: #9aa5ad;
+        --line: #2a3238;
+        --bg: #12171b;
+        --paper: #181f24;
+        --danger: #ff8c8c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 17px/1.65 "Bricolage Grotesque", system-ui, -apple-system,
+        "Segoe UI", sans-serif;
+    }
+
+    .w {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      color: var(--c);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    header {
+      border-top: 6px solid var(--c);
+      background: var(--paper);
+      padding: 32px 0 28px;
+    }
+
+    .kicker {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--c);
+      margin: 0 0 8px;
+      letter-spacing: .02em;
+    }
+
+    h1 {
+      font-size: clamp(28px, 6.5vw, 40px);
+      line-height: 1.1;
+      margin: 0 0 14px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .lead {
+      color: var(--soft);
+      margin: 0;
+      max-width: 34em;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.25;
+      margin: 0 0 16px;
+      font-weight: 800;
+      letter-spacing: -.01em;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 1.35;
+      margin: 24px 0 7px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 14px;
+      max-width: 36em;
+    }
+
+    .arac {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--c);
+      border-radius: 8px;
+      padding: 22px;
+      margin-top: -10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .03);
+    }
+
+    .iki {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0 0 6px;
+    }
+
+    .ipucu {
+      font-weight: 400;
+      color: var(--soft);
+      font-size: 14px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      font: inherit;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--ink);
+      margin-bottom: 16px;
+      min-height: 48px;
+    }
+
+    input:focus,
+    select:focus {
+      outline: 3px solid var(--c);
+      outline-offset: 0;
+    }
+
+    .kur-yardim {
+      margin: -8px 0 16px;
+      font-size: 14px;
+    }
+
+    .sonuc {
+      margin-top: 6px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .satir {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .satir span {
+      color: var(--soft);
+      font-size: 15px;
+    }
+
+    .satir b {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .net {
+      background: var(--c-soft);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .net span {
+      font-weight: 600;
+    }
+
+    .net b {
+      font-size: clamp(20px, 5vw, 26px);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -.01em;
+      white-space: nowrap;
+    }
+
+    .uyari {
+      font-size: 14px;
+      color: var(--soft);
+      margin: 14px 0 0;
+    }
+
+    .uyari.hata {
+      color: var(--danger);
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+    }
+
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::before {
+      content: "+ ";
+      color: var(--c);
+      font-weight: 800;
+    }
+
+    details[open] summary::before {
+      content: "– ";
+    }
+
+    details p {
+      margin: 10px 0 0;
+      color: var(--soft);
+    }
+
+    .kaynak {
+      font-size: 15px;
+      color: var(--soft);
+      margin-top: 24px;
+    }
+
+    footer {
+      padding: 26px 0 40px;
+      color: var(--soft);
+      font-size: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 430px) {
+      .w {
+        padding: 0 16px;
+      }
+
+      .iki {
+        grid-template-columns: 1fr;
+      }
+
+      .arac {
+        padding: 18px;
+      }
+
+      .satir {
+        align-items: flex-start;
+      }
+
+      .net {
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="w">
+    <p class="kicker">Freelancer Vergi · Hesaplama araçları</p>
+
+    <h1>Döviz faturası TL karşılığı hesaplama</h1>
+
+    <p class="lead">
+      Yurt dışındaki müşterinize kestiğiniz dolar, euro veya sterlin
+      faturanın TL karşılığını hesaplayın. KDV ve stopaj seçeneklerini
+      kullanarak tahmini tahsilat tutarınızı görün.
+    </p>
+  </div>
+</header>
+
+<main class="w">
+
+  <section aria-labelledby="hesaplama-baslik">
+
+    <div class="arac">
+
+      <div class="iki">
+
+        <div>
+          <label for="tutar">Fatura tutarı</label>
+
+          <input
+            id="tutar"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="0.01"
+            value="1000"
+            aria-label="Fatura tutarı"
+          >
+        </div>
+
+        <div>
+          <label for="birim">Para birimi</label>
+
+          <select id="birim" aria-label="Para birimi">
+            <option value="USD">Dolar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">Sterlin (GBP)</option>
+            <option value="OTH">Diğer</option>
+          </select>
+        </div>
+
+      </div>
+
+      <label for="kur">
+        TCMB döviz alış kuru
+        <span class="ipucu">(işlem tarihindeki)</span>
+      </label>
+
+      <input
+        id="kur"
+        type="number"
+        inputmode="decimal"
+        min="0"
+        step="0.0001"
+        placeholder="Örn. 41,2536"
+        aria-describedby="kur-yardim"
+      >
+
+      <p class="kur-yardim" id="kur-yardim">
+        <a
+          href="https://www.tcmb.gov.tr/kurlar/kurlar_tr.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TCMB kur arşivinden tarihe göre kuru bulun →
+        </a>
+      </p>
+
+      <label for="kdv">KDV durumu</label>
+
+      <select id="kdv">
+        <option value="0">İstisna — KDV yok</option>
+        <option value="20">%20 KDV uygulanıyor</option>
+        <option value="10">%10 KDV uygulanıyor</option>
+      </select>
+
+      <label for="stopaj">Stopaj durumu</label>
+
+      <select id="stopaj">
+        <option value="0">Yok</option>
+        <option value="20">%20 stopaj</option>
+      </select>
+
+      <div
+        class="sonuc"
+        id="sonuc"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+
+        <div class="satir">
+          <span>Fatura tutarı (döviz)</span>
+          <b id="r-doviz">—</b>
+        </div>
+
+        <div class="satir">
+          <span>TL karşılığı (matrah)</span>
+          <b id="r-matrah">—</b>
+        </div>
+
+        <div class="satir">
+          <span>KDV</span>
+          <b id="r-kdv">—</b>
+        </div>
+
+        <div class="satir">
+          <span>Stopaj</span>
+          <b id="r-stopaj">—</b>
+        </div>
+
+        <div class="satir">
+          <span>Fatura toplamı</span>
+          <b id="r-toplam">—</b>
+        </div>
+
+        <div class="net">
+          <span>Elinize geçen</span>
+          <b id="r-net">—</b>
+        </div>
+
+        <p class="uyari" id="uyari">
+          Kuru girin, hesap otomatik yapılır.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>Hesap nasıl yapılıyor?</h2>
+
+    <p>
+      Döviz cinsinden düzenlenen belgelerde Türk lirası karşılığının
+      hesaplanmasında ilgili vergi ve muhasebe kuralları dikkate alınır.
+      Bu araç, girilen döviz tutarı ile TCMB kuru üzerinden tahmini TL
+      karşılığını hesaplamak için hazırlanmıştır.
+    </p>
+
+    <h3>Hangi kur kullanılmalı?</h3>
+
+    <p>
+      Hesaplamada işlem tarihine ait TCMB kuru esas alınır. Ödeme daha
+      sonraki bir tarihte gerçekleşirse tahsilat tarihindeki kur değişikliği
+      ayrıca değerlendirilmesi gereken bir konudur.
+    </p>
+
+    <h3>Kurun yayımlanmadığı günler</h3>
+
+    <p>
+      TCMB'nin yeni kur yayımlamadığı günlerde hangi kurun esas alınacağı,
+      işlemin niteliğine ve ilgili mevzuata göre değerlendirilmelidir.
+      Özellikle resmî tatil ve hafta sonu işlemlerinde mali müşavirinizden
+      teyit almanız gerekir.
+    </p>
+
+    <h3>KDV ve stopaj</h3>
+
+    <p>
+      Yurt dışındaki müşterilere verilen hizmetlerde KDV uygulaması,
+      hizmetin niteliği ve hizmet ihracatı şartlarının sağlanıp
+      sağlanmadığına göre değişebilir. Bu nedenle "yurt dışına fatura =
+      her zaman KDV'siz" şeklinde değerlendirme yapılmamalıdır.
+    </p>
+
+    <p>
+      Stopaj uygulaması da ödemenin niteliğine, ödeme yapan tarafa ve
+      ilgili vergi mevzuatına göre değişebilir. Araçtaki seçenekler yalnızca
+      hesaplama amacıyla sunulmaktadır.
+    </p>
+
+    <p class="kaynak">
+      Bu araç bilgilendirme ve hesaplama amacıyla hazırlanmıştır.
+      Vergisel işlemlerinizde güncel mevzuatı ve mali müşavirinizin
+      değerlendirmesini esas alın.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>Sık sorulanlar</h2>
+
+    <details>
+      <summary>Efektif alış kuru mu, döviz alış kuru mu kullanılır?</summary>
+
+      <p>
+        Döviz işlemlerinde kullanılacak kur, işlemin niteliğine ve
+        uygulanacak mevzuata göre belirlenir. Banka üzerinden gerçekleşen
+        döviz işlemleri ile nakit döviz işlemleri birbirinden farklı
+        değerlendirilebilir.
+      </p>
+    </details>
+
+    <details>
+      <summary>Para hesabıma geç geldi, kur değişti. Ne olacak?</summary>
+
+      <p>
+        Belgenin düzenlenmesi ile tahsilat tarihi arasında kur değişikliği
+        meydana gelmesi halinde ortaya çıkan fark ayrıca muhasebeleştirilebilir.
+        Uygulama için mali müşavirinizle görüşün.
+      </p>
+    </details>
+
+    <details>
+      <summary>Faturayı döviz olarak düzenleyebilir miyim?</summary>
+
+      <p>
+        Döviz cinsinden belge düzenlenmesine ilişkin kurallar işlemin
+        niteliğine göre değişebilir. Uygulanacak belge ve TL karşılığı
+        konusunda güncel mevzuat dikkate alınmalıdır.
+      </p>
+    </details>
+
+    <details>
+      <summary>Yurt dışı müşteriden gelen ödemede stopaj olur mu?</summary>
+
+      <p>
+        Stopajın uygulanıp uygulanmayacağı yalnızca müşterinin yurt dışında
+        bulunmasına göre belirlenmez. Ödemenin niteliği, tarafların durumu
+        ve ilgili vergi kuralları birlikte değerlendirilmelidir.
+      </p>
+    </details>
+
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="w">
+    Freelancer Vergi · Hesaplama araçları
+  </div>
+</footer>
+
+
+<script>
+(function () {
+
+  "use strict";
+
+  const tutar = document.getElementById("tutar");
+  const birim = document.getElementById("birim");
+  const kur = document.getElementById("kur");
+  const kdvS = document.getElementById("kdv");
+  const stopajS = document.getElementById("stopaj");
+  const uyari = document.getElementById("uyari");
+
+  const tl = new Intl.NumberFormat("tr-TR", {
+    style: "currency",
+    currency: "TRY",
+    maximumFractionDigits: 2
+  });
+
+  function dovizFormatla(sayi, paraBirimi) {
+
+    if (paraBirimi === "OTH") {
+      return new Intl.NumberFormat("tr-TR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }).format(sayi);
+    }
+
+    return new Intl.NumberFormat("tr-TR", {
+      style: "currency",
+      currency: paraBirimi,
+      maximumFractionDigits: 2
+    }).format(sayi);
+  }
+
+  function yaz(id, deger) {
+    document.getElementById(id).textContent = deger;
+  }
+
+  function hesapla() {
+
+    const t = parseFloat(tutar.value);
+    const k = parseFloat(kur.value);
+
+    const kdvOrani = parseFloat(kdvS.value) / 100;
+    const stopajOrani = parseFloat(stopajS.value) / 100;
+
+    const paraBirimi = birim.value;
+
+    /*
+     * Döviz tutarını her durumda göster.
+     */
+    if (Number.isFinite(t) && t > 0) {
+
+      yaz(
+        "r-doviz",
+        dovizFormatla(t, paraBirimi)
+      );
+
+    } else {
+
+      yaz("r-doviz", "—");
+
+    }
+
+    /*
+     * Geçerli tutar ve kur yoksa hesaplama yapma.
+     */
+    if (
+      !Number.isFinite(t) ||
+      t <= 0 ||
+      !Number.isFinite(k) ||
+      k <= 0
+    ) {
+
+      [
+        "r-matrah",
+        "r-kdv",
+        "r-stopaj",
+        "r-toplam",
+        "r-net"
+      ].forEach(function (id) {
+        yaz(id, "—");
+      });
+
+      uyari.classList.remove("hata");
+      uyari.textContent = "Kuru girin, hesap otomatik yapılır.";
+
+      return;
+    }
+
+    /*
+     * Ana hesaplama.
+     */
+    const matrah = t * k;
+    const kdv = matrah * kdvOrani;
+    const stopaj = matrah * stopajOrani;
+
+    const toplam = matrah + kdv;
+    const net = toplam - stopaj;
+
+    yaz("r-matrah", tl.format(matrah));
+
+    yaz(
+      "r-kdv",
+      kdvOrani > 0
+        ? tl.format(kdv)
+        : "Yok"
+    );
+
+    yaz(
+      "r-stopaj",
+      stopajOrani > 0
+        ? "− " + tl.format(stopaj)
+        : "Yok"
+    );
+
+    yaz("r-toplam", tl.format(toplam));
+    yaz("r-net", tl.format(net));
+
+    uyari.classList.remove("hata");
+    uyari.textContent =
+      "Sonuçlar tahmini hesaplamadır; vergi işlemlerinizde güncel mevzuatı ve mali müşavirinizi esas alın.";
+  }
+
+  [
+    tutar,
+    birim,
+    kur,
+    kdvS,
+    stopajS
+  ].forEach(function (element) {
+
+    element.addEventListener("input", hesapla);
+    element.addEventListener("change", hesapla);
+
+  });
+
+  hesapla();
+
+})();
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Efektif alış kuru mu, döviz alış kuru mu kullanılır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Döviz işlemlerinde kullanılacak kur işlemin niteliğine ve uygulanacak mevzuata göre belirlenir. Banka üzerinden gerçekleşen döviz işlemleri ile nakit döviz işlemleri birbirinden farklı değerlendirilebilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Para hesabıma geç geldi, kur değişti. Ne olacak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belgenin düzenlenmesi ile tahsilat tarihi arasında kur değişikliği meydana gelmesi halinde ortaya çıkan fark ayrıca muhasebeleştirilebilir. Uygulama için mali müşavirinizle görüşün."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Faturayı döviz olarak düzenleyebilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Döviz cinsinden belge düzenlenmesine ilişkin kurallar işlemin niteliğine göre değişebilir. Uygulanacak belge ve TL karşılığı konusunda güncel mevzuat dikkate alınmalıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Yurt dışı müşteriden gelen ödemede stopaj olur mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stopajın uygulanıp uygulanmayacağı yalnızca müşterinin yurt dışında bulunmasına göre belirlenmez. Ödemenin niteliği, tarafların durumu ve ilgili vergi kuralları birlikte değerlendirilmelidir."
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
