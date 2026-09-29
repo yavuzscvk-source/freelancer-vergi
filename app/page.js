@@ -14,6 +14,12 @@ const ARACLAR = [
   { href: "/genc-girisimci-istisnasi", baslik: "Genç girişimci istisnası 2026", aciklama: "400.000 TL istisnayla ödeyeceğiniz vergi ve avantajınız." },
   { href: "/sahis-mi-limited-mi", baslik: "Şahıs şirketi mi limited mi?", aciklama: "Kârınıza göre iki şirket türünün toplam vergi yükü." },
   { href: "/kdv-hesaplama", baslik: "KDV hesaplama", aciklama: "KDV ekleyin veya KDV dahil tutardan ayırın. %1, %10, %20." },
+  {
+    href: "/doviz-fatura-tl-karsiligi",
+    baslik: "Döviz faturası TL karşılığı",
+    aciklama:
+      "USD, EUR ve GBP faturalarının TL karşılığını kur, KDV ve stopajla hesaplayın.",
+  },
   { href: "/hizmet-ihracati-vergi-indirimi", baslik: "Yurt dışına hizmet: %100 vergi indirimi", aciklama: "2026'da yazılım, tasarım ve mühendislik ihracatında kazanç indirimi." },
   { href: "/sahis-sirketi-maliyeti", baslik: "Şahıs şirketi aylık maliyeti", aciklama: "Bağ-Kur primi, müşavir ve sabit giderlerle aylık gerçek maliyet." },
   { href: "/net-gelir-hesaplama", baslik: "Freelancer net gelir hesaplama", aciklama: "Vergi, Bağ-Kur ve giderlerden sonra cebinize ne kalıyor?" },
@@ -22,12 +28,7 @@ const ARACLAR = [
   { href: "/fiverr-vergi-hesaplama", baslik: "Fiverr vergi hesaplama", aciklama: "%20 komisyon ve vergilerden sonra Fiverr kazancınız." },
   { href: "/youtube-vergi-hesaplama", baslik: "YouTube gelir vergisi hesaplama", aciklama: "İçerik üreticiliği istisnası, %15 stopaj ve 5.300.000 TL sınırı." },
   { href: "/instagram-vergi-hesaplama", baslik: "Instagram, TikTok ve Kick vergisi", aciklama: "Sosyal medya kazancınız istisna kapsamında mı?" },
-{
-  href: "/doviz-fatura-tl-karsiligi",
-  baslik: "Döviz faturası TL karşılığı",
-  aciklama:
-    "USD, EUR ve GBP faturalarının TL karşılığını kur, KDV ve stopajla hesaplayın.",
-},
+
 ];
 
 
