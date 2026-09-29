@@ -22,6 +22,7 @@ export default function Hesaplayici() {
   const tasarruf = normalVergi - istisnaliVergi;
   const mahsup = sayiyaCevir(stopaj) + sayiyaCevir(gecici);
   const fark = istisnaliVergi - mahsup;
+
   const kontrol = (() => {
     if (!dogum || !baslama) return null;
     const d = new Date(dogum);
@@ -57,18 +58,6 @@ export default function Hesaplayici() {
       </div>
 
       <div className="results">
-                 <div className="results">
-        ...satırlar...
-      </div>
-
-      <details className="nasil">
-        ...
-      </details>
-
-      <div style={{ marginTop: 24, ... }}>
-        Yaş ve süre kontrolü...
-
-
         <div className="row"><span>Yıllık kazanç</span><span>{tl(kazanc)}</span></div>
         <div className="row"><span>Genç girişimci istisnası</span><span>{eksi(istisnaTutari)}</span></div>
         <div className="row"><span>Vergi matrahı</span><span>{tl(matrah)}</span></div>
@@ -81,7 +70,20 @@ export default function Hesaplayici() {
           <span>{tl(Math.abs(fark))}</span>
         </div>
       </div>
-         <div style={{ marginTop: 24, borderTop: "1px solid var(--line)", paddingTop: 16 }}>
+
+      <details className="nasil">
+        <summary>Bu sonuç nasıl çıktı?</summary>
+        <ol>
+          <li>Kazanç = gelir − giderler: {tl(sayiyaCevir(gelir))} − {tl(sayiyaCevir(gider))} = <b>{tl(kazanc)}</b></li>
+          <li>İstisna, kazancı aşamaz. 400.000 TL sınırı ile karşılaştırıldı: <b>{tl(istisnaTutari)}</b></li>
+          <li>Matrah = kazanç − istisna: {tl(kazanc)} − {tl(istisnaTutari)} = <b>{tl(matrah)}</b></li>
+          <li>Matraha 2026 tarifesi uygulandı: <b>{tl(istisnaliVergi)}</b></li>
+          <li>Avantaj = istisnasız vergi − istisnalı vergi: {tl(normalVergi)} − {tl(istisnaliVergi)} = <b>{tl(tasarruf)}</b></li>
+          <li>{fark >= 0 ? "Ödenecek" : "İade edilebilecek"} = vergi − mahsup: {tl(istisnaliVergi)} − {tl(mahsup)} = <b>{tl(Math.abs(fark))}</b></li>
+        </ol>
+      </details>
+
+      <div style={{ marginTop: 24, borderTop: "1px solid var(--line)", paddingTop: 16 }}>
         <strong>Yaş ve süre kontrolü</strong>
         <div className="muted">İşe başlama tarihindeki yaşınıza göre uygunluğunuzu ve istisnanın hangi yıllarda uygulanacağını gösterir.</div>
 
@@ -110,7 +112,6 @@ export default function Hesaplayici() {
           çalışılması gibi diğer şartlar da aranır.
         </p>
       </div>
-
-  </div>
+    </div>
   );
 }
