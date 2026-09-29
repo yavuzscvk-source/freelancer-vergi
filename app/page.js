@@ -22,7 +22,12 @@ const ARACLAR = [
   { href: "/fiverr-vergi-hesaplama", baslik: "Fiverr vergi hesaplama", aciklama: "%20 komisyon ve vergilerden sonra Fiverr kazancınız." },
   { href: "/youtube-vergi-hesaplama", baslik: "YouTube gelir vergisi hesaplama", aciklama: "İçerik üreticiliği istisnası, %15 stopaj ve 5.300.000 TL sınırı." },
   { href: "/instagram-vergi-hesaplama", baslik: "Instagram, TikTok ve Kick vergisi", aciklama: "Sosyal medya kazancınız istisna kapsamında mı?" },
-
+{
+  href: "/doviz-fatura-tl-karsiligi",
+  baslik: "Döviz faturası TL karşılığı",
+  aciklama:
+    "USD, EUR ve GBP faturalarının TL karşılığını kur, KDV ve stopajla hesaplayın.",
+},
 ];
 
 
