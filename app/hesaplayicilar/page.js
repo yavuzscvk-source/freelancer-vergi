@@ -19,7 +19,6 @@ const GRUPLAR = [
     ],
   },
   {
-  {
     ad: "Yurt dışı ve döviz",
     araclar: [
     {
