@@ -17,6 +17,8 @@ const ARACLAR = {
   fiverr: { href: "/fiverr-vergi-hesaplama", ad: "Fiverr vergi hesaplama" },
   youtube: { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi hesaplama" },
   instagram: { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok ve Kick vergisi" },
+  tevkifat: { href: "/kdv-tevkifati-hesaplama", ad: "KDV tevkifatı hesaplama" },
+
 };
 
 const REHBERLER = {
@@ -40,6 +42,8 @@ const GIB = { ad: "Gelir İdaresi Başkanlığı", url: "https://www.gib.gov.tr"
 const KARAR = { ad: "11257 sayılı Cumhurbaşkanı Kararı (30/4/2026 tarihli Resmî Gazete)", url: "https://www.resmigazete.gov.tr/eskiler/2026/04/20260430-1.pdf" };
 const MEVZUAT = { ad: "Gelir Vergisi Kanunu güncel metni (mevzuat.gov.tr)", url: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=193&MevzuatTur=1&MevzuatTertip=4" };
 const SGK = { ad: "Sosyal Güvenlik Kurumu", url: "https://www.sgk.gov.tr" };
+const KDVTEB = { ad: "KDV Genel Uygulama Tebliğleri (GİB)", url: "https://gib.gov.tr/katma-deger-vergisi-genel-uygulama-tebligleri" };
+
 
 const KAYNAKLAR = {
   makbuz: [GVK, GIB],
@@ -55,6 +59,7 @@ const KAYNAKLAR = {
   fiverr: [KARAR, GVK, SGK],
   youtube: [GVK, MEVZUAT, TARIFE],
   instagram: [GVK, MEVZUAT],
+  tevkifat: [KDVTEB, GIB],
   rehberTemel: [GVK, MEVZUAT, TARIFE],
   rehberBelge: [GVK, GIB],
   rehberYurtdisi: [KARAR, GVK, MEVZUAT],
