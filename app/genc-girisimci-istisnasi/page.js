@@ -3,11 +3,10 @@ import Hesaplayici from "./Hesaplayici";
 import { sayfa } from "../../lib/seo";
 import Kaynaklar from "../Kaynaklar";
 export const metadata = sayfa({
-  baslik: "Genç Girişimci İstisnası Hesaplama 2026",
-  aciklama: "2026 genç girişimci kazanç istisnası (400.000 TL) ile ödeyeceğiniz gelir vergisini ve vergi avantajınızı hesaplayın. Şartlar ve güncel bilgiler.",
+  baslik: "Genç Girişimci İstisnası ve Yaş Hesaplama 2026",
+  aciklama: "Genç girişimci yaş şartını hesaplayın (18-29 yaş) ve 2026 istisnasıyla (400.000 TL) ödeyeceğiniz gelir vergisini görün. İstisnanın hangi yıllarda geçerli olduğunu öğrenin.",
   yol: "/genc-girisimci-istisnasi",
 });
-
 
 
 export default function GencGirisimci() {
