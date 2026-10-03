@@ -8,10 +8,11 @@ const B = VERGI.bagkur;
 const sayi = (n) => n.toLocaleString("tr-TR");
 
 export const metadata = sayfa({
-  baslik: "Şahıs Şirketi Aylık Maliyet Hesaplama 2026",
-  aciklama: "Şahıs şirketinin aylık sabit maliyetini hesaplayın: 2026 Bağ-Kur primi, 5 puan indirimi, mali müşavir ücreti ve diğer giderler.",
+  baslik: "Şahıs Şirketi Aylık Maliyeti ve Sigorta Primi (Bağ-Kur) 2026",
+  aciklama: "Şahıs şirketi sigorta primi ne kadar? 2026 Bağ-Kur primi, 5 puan indirimi, mali müşavir ücreti ve diğer aylık sabit giderleri hesaplayın.",
   yol: "/sahis-sirketi-maliyeti",
 });
+
 
 export default function SahisMaliyet() {
   return (
@@ -21,7 +22,7 @@ export default function SahisMaliyet() {
 
       <Hesaplayici />
 
-      <h2>2026 Bağ-Kur primi ne kadar?</h2>
+      <h2>Şahıs şirketi sigorta primi (Bağ-Kur) 2026'da ne kadar?</h2>
       <p>Bağ-Kur (4/b) primi, beyan ettiğiniz prime esas kazanç ile prim oranının çarpımıdır. 2026 için alt sınır brüt asgari ücret olan {sayi(B.altSinir)} TL, üst sınır bunun dokuz katı olan {sayi(B.ustSinir)} TL'dir. 7566 sayılı Kanun ile malullük, yaşlılık ve ölüm sigortası prim oranı bir puan artmış, toplam oran %35,75'e yükselmiştir. Alt sınırdan beyanda aylık prim 11.808,23 TL olur.</p>
 
       <h2>5 puanlık indirim nedir?</h2>
