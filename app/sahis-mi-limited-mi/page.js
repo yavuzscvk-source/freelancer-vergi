@@ -18,6 +18,10 @@ export default function SahisLimited() {
       <p>Yıllık kârınızı girin; şahıs şirketi ve limited şirkette ödeyeceğiniz toplam vergiyi yan yana görün.</p>
 
       <Hesaplayici />
+    
+      <h2>Limited şirket gelir vergisi mi öder? Limited şirket vergi oranı</h2>
+      <p>Limited şirket gelir vergisi değil, kurumlar vergisi öder. Genel oran %25'tir ve şirketin kârı üzerinden hesaplanır. Kâr ortaklara dağıtılırsa dağıtılan tutardan ayrıca %15 kâr payı stopajı kesilir. Kârın tamamı çekilirse toplam vergi yükü yaklaşık %36,25 olur. Ortağa maaş ödenirse maaş üzerinden gelir vergisi ve sigorta kesintileri ayrıca doğar; bu hesaba dahil değildir.</p>
+
 
       <h2>Vergi farkı nereden geliyor?</h2>
       <p>Şahıs şirketinde kâr, artan oranlı gelir vergisine tabidir; oran %15'ten başlar ve %40'a kadar çıkar. Limited şirkette ise kâr sabit %25 kurumlar vergisine tabidir. Ancak limited şirketteki para şirketindir; kendi hesabınıza çekmek için kâr dağıtımı yapmanız gerekir ve dağıtılan tutardan ayrıca %15 stopaj kesilir.</p>
