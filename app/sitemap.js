@@ -30,6 +30,7 @@ const YOLLAR = [
   "/rehber/youtube-1-milyon-tl-vergi",
   "/rehber/yurt-ici-musteri-100-bin-tl",
   "/rehber/hangi-giderler-yazilabilir",
+  "/rehber/hesaplanan-kdv-indirilecek-kdv",
   "/hakkinda",
   "/iletisim",
   "/gizlilik-politikasi",
