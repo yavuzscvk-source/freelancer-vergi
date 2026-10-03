@@ -1,132 +1,109 @@
 "use client";
 
 import { useState } from "react";
-import { sayiyaCevir, tl, oranYazi } from "../../lib/format";
+import { VERGI } from "../../lib/vergi";
+import { sayiyaCevir, tl, eksi, oranYazi } from "../../lib/format";
+
+const PARA_BIRIMLERI = [
+  { kod: "USD", ad: "USD" },
+  { kod: "EUR", ad: "EUR" },
+  { kod: "GBP", ad: "GBP" },
+  { kod: "DIGER", ad: "Diğer" },
+];
+const KDV_ORANLARI = [20, 10, 0];
+const STOPAJ_ORANLARI = [0, Math.round(VERGI.serbestMeslekStopaji * 100)];
 
 export default function Hesaplayici() {
   const [tutar, setTutar] = useState("1.000");
-  const [paraBirimi, setParaBirimi] = useState("USD");
+  const [para, setPara] = useState("USD");
   const [kur, setKur] = useState("");
-  const [kdv, setKdv] = useState("0.20");
-  const [stopaj, setStopaj] = useState("0");
+  const [kdvOrani, setKdvOrani] = useState(20);
+  const [stopajOrani, setStopajOrani] = useState(0);
 
-  const yabanciTutar = sayiyaCevir(tutar);
+  const doviz = sayiyaCevir(tutar);
   const kurDegeri = sayiyaCevir(kur);
+  const hazir = doviz > 0 && kurDegeri > 0;
 
-  const matrah = yabanciTutar * kurDegeri;
-  const kdvTutar = matrah * Number(kdv);
-  const stopajTutar = matrah * Number(stopaj);
-  const toplam = matrah + kdvTutar;
-  const net = toplam - stopajTutar;
+  const matrah = doviz * kurDegeri;
+  const kdv = matrah * (kdvOrani / 100);
+  const toplam = matrah + kdv;
+  const stopaj = matrah * (stopajOrani / 100);
+  const net = toplam - stopaj;
+
+  const birim = para === "DIGER" ? "birim" : para;
+  const dovizYazi = doviz.toLocaleString("tr-TR") + (para === "DIGER" ? "" : " " + para);
 
   return (
     <div className="card">
-      <label htmlFor="doviz-tutar">Fatura tutarı</label>
-      <input
-        id="doviz-tutar"
-        type="text"
-        inputMode="decimal"
-        value={tutar}
-        onChange={(e) => setTutar(e.target.value)}
-      />
+      <label htmlFor="doviz-tutar">Fatura tutarı (döviz)</label>
+      <input id="doviz-tutar" type="text" inputMode="decimal" value={tutar} onChange={(e) => setTutar(e.target.value)} />
 
-      <label htmlFor="para-birimi">Para birimi</label>
-      <select
-        id="para-birimi"
-        value={paraBirimi}
-        onChange={(e) => setParaBirimi(e.target.value)}
-      >
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="DIGER">Diğer</option>
-      </select>
-
-      <label htmlFor="kur">
-        Kur (1 {paraBirimi === "DIGER" ? "birim" : paraBirimi} = TL)
-      </label>
-      <input
-        id="kur"
-        type="text"
-        inputMode="decimal"
-        placeholder="Örn. 41,50"
-        value={kur}
-        onChange={(e) => setKur(e.target.value)}
-      />
-
-      <label htmlFor="doviz-kdv">KDV oranı</label>
-      <select
-        id="doviz-kdv"
-        value={kdv}
-        onChange={(e) => setKdv(e.target.value)}
-      >
-        <option value="0">%0</option>
-        <option value="0.10">%10</option>
-        <option value="0.20">%20</option>
-      </select>
-
-      <label htmlFor="doviz-stopaj">Stopaj oranı</label>
-      <select
-        id="doviz-stopaj"
-        value={stopaj}
-        onChange={(e) => setStopaj(e.target.value)}
-      >
-        <option value="0">%0</option>
-        <option value="0.20">%20</option>
-      </select>
-
-      <div className="results">
-        <div className="row">
-          <span>Döviz tutarı</span>
-          <span>
-            {yabanciTutar.toLocaleString("tr-TR")}{" "}
-            {paraBirimi === "DIGER" ? "" : paraBirimi}
-          </span>
-        </div>
-
-        <div className="row">
-          <span>TL matrah</span>
-          <span>{tl(matrah)}</span>
-        </div>
-
-        <div className="row">
-          <span>KDV ({oranYazi(Number(kdv))})</span>
-          <span>{tl(kdvTutar)}</span>
-        </div>
-
-        <div className="row">
-          <span>Stopaj ({oranYazi(Number(stopaj))})</span>
-          <span>{tl(stopajTutar)}</span>
-        </div>
-
-        <div className="row">
-          <span>Fatura toplamı</span>
-          <span>{tl(toplam)}</span>
-        </div>
-
-        <div className="row total">
-          <span>Stopaj sonrası net</span>
-          <span>{tl(net)}</span>
+      <div style={{ marginTop: 16 }}>
+        <label>Para birimi</label>
+        <div className="toggle">
+          {PARA_BIRIMLERI.map((p) => (
+            <button key={p.kod} type="button" className={para === p.kod ? "active" : ""} onClick={() => setPara(p.kod)}>
+              {p.ad}
+            </button>
+          ))}
         </div>
       </div>
 
-      <details className="nasil">
-        <summary>Bu sonuç nasıl çıktı?</summary>
+      <div style={{ marginTop: 16 }}>
+        <label htmlFor="doviz-kur">Kur (1 {birim} kaç TL?)</label>
+        <input id="doviz-kur" type="text" inputMode="decimal" placeholder="Örn. 48,00" value={kur} onChange={(e) => setKur(e.target.value)} />
+      </div>
 
-        <ol>
-          <li>
-            TL matrahı = döviz tutarı × kur = <b>{tl(matrah)}</b>
-          </li>
-          <li>
-            KDV = TL matrah × {oranYazi(Number(kdv))} ={" "}
-            <b>{tl(kdvTutar)}</b>
-          </li>
-          <li>
-            Stopaj = TL matrah × {oranYazi(Number(stopaj))} ={" "}
-            <b>{tl(stopajTutar)}</b>
-          </li>
-        </ol>
-      </details>
+      <div style={{ marginTop: 16 }}>
+        <label>KDV oranı</label>
+        <div className="toggle">
+          {KDV_ORANLARI.map((o) => (
+            <button key={o} type="button" className={kdvOrani === o ? "active" : ""} onClick={() => setKdvOrani(o)}>
+              %{o}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <label>Stopaj oranı</label>
+        <div className="toggle">
+          {STOPAJ_ORANLARI.map((o) => (
+            <button key={o} type="button" className={stopajOrani === o ? "active" : ""} onClick={() => setStopajOrani(o)}>
+              %{o}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {hazir ? (
+        <>
+          <div className="results">
+            <div className="row"><span>Döviz tutarı</span><span>{dovizYazi}</span></div>
+            <div className="row"><span>Kur</span><span>{kurDegeri.toLocaleString("tr-TR", { maximumFractionDigits: 4 })} TL</span></div>
+            <div className="row"><span>TL matrah</span><span>{tl(matrah)}</span></div>
+            <div className="row"><span>KDV ({oranYazi(kdvOrani / 100)})</span><span>{tl(kdv)}</span></div>
+            <div className="row"><span>Fatura toplamı</span><span>{tl(toplam)}</span></div>
+            <div className="row"><span>Stopaj ({oranYazi(stopajOrani / 100)})</span><span>{eksi(stopaj)}</span></div>
+            <div className="row total"><span>Stopaj sonrası net</span><span>{tl(net)}</span></div>
+          </div>
+
+          <details className="nasil">
+            <summary>Bu sonuç nasıl çıktı?</summary>
+            <ol>
+              <li>TL matrah = döviz tutarı × kur: {dovizYazi} × {kurDegeri.toLocaleString("tr-TR", { maximumFractionDigits: 4 })} = <b>{tl(matrah)}</b></li>
+              <li>KDV = TL matrah × {oranYazi(kdvOrani / 100)}: <b>{tl(kdv)}</b></li>
+              <li>Fatura toplamı = matrah + KDV: {tl(matrah)} + {tl(kdv)} = <b>{tl(toplam)}</b></li>
+              <li>Stopaj = TL matrah × {oranYazi(stopajOrani / 100)}: <b>{tl(stopaj)}</b></li>
+              <li>Net = fatura toplamı − stopaj: {tl(toplam)} − {tl(stopaj)} = <b>{tl(net)}</b></li>
+            </ol>
+          </details>
+        </>
+      ) : (
+        <p className="muted" style={{ marginTop: 16 }}>
+          Sonucu görmek için kuru girin. Örneğin 1.000 USD için kur 48,00 ise TL matrah 48.000 TL olur.
+        </p>
+      )}
     </div>
   );
 }
