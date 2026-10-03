@@ -33,6 +33,7 @@ const REHBERLER = {
   rehberYoutube: { href: "/rehber/youtube-1-milyon-tl-vergi", ad: "YouTube'dan yılda 1,2 milyon TL kazanırsam?" },
   rehberYurtIci: { href: "/rehber/yurt-ici-musteri-100-bin-tl", ad: "Yurt içi müşteriye 100.000 TL'lik iş yaptım, elime ne geçer?" },
   rehberGider: { href: "/rehber/hangi-giderler-yazilabilir", ad: "Freelancer hangi harcamaları gider yazabilir?" },
+  rehberKdv: { href: "/rehber/hesaplanan-kdv-indirilecek-kdv", ad: "Hesaplanan KDV, indirilecek KDV ve ödenecek KDV nedir?" },
   rehberEsmm: { href: "/rehber/e-smm-nasil-kesilir", ad: "e-Serbest meslek makbuzu nasıl kesilir?" },
 
 };
@@ -71,6 +72,7 @@ const KAYNAKLAR = {
   rehberYoutube: [GVK, MEVZUAT, TARIFE],
   rehberYurtIci: [GVK, TARIFE, SGK],
   rehberGider: [GVK, MEVZUAT, GIB],
+  rehberKdv: [KDVTEB, GIB],
   rehberEsmm: [GVK, GIB],
   doviz: [KDVTEB, GIB],
 
