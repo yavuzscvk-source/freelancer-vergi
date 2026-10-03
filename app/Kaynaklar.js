@@ -72,6 +72,7 @@ const KAYNAKLAR = {
   rehberYurtIci: [GVK, TARIFE, SGK],
   rehberGider: [GVK, MEVZUAT, GIB],
   rehberEsmm: [GVK, GIB],
+  doviz: [KDVTEB, GIB],
 
 };
 
