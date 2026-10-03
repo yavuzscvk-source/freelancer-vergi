@@ -18,6 +18,7 @@ const ARACLAR = {
   youtube: { href: "/youtube-vergi-hesaplama", ad: "YouTube gelir vergisi hesaplama" },
   instagram: { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok ve Kick vergisi" },
   tevkifat: { href: "/kdv-tevkifati-hesaplama", ad: "KDV tevkifatı hesaplama" },
+  doviz: { href: "/doviz-fatura-tl-karsiligi", ad: "Döviz faturası TL karşılığı" },
 
 };
 
