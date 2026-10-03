@@ -34,6 +34,7 @@ const GRUPLAR = [
       },
       {
         href: "/kdv-hesaplama",
+      { href: "/kdv-tevkifati-hesaplama", ad: "KDV tevkifatı hesaplama", not: "Danışmanlık makbuzunda 9/10 tevkifat." },   
         ad: "KDV hesaplama",
         not: "KDV ekleme ve ayırma.",
       },
