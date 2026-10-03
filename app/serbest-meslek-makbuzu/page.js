@@ -27,6 +27,9 @@ export default function SerbestMeslekMakbuzu() {
       <h2>Netten brüte nasıl hesaplanır?</h2>
       <p>Netten brüte stopaj hesaplama, net tutarın 0,80'e bölünmesiyle yapılır. Çünkü brüt tutardan %20 stopaj kesilince geriye %80'i kalır. Örneğin elinize 8.000 TL net geçmesini istiyorsanız brüt tutar 8.000 ÷ 0,80 = 10.000 TL olmalıdır; bu durumda stopaj 2.000 TL olur. Hesaplayıcıda "Netten hesapla" seçeneğine basarak istediğiniz net tutarı girmeniz yeterlidir.</p>
 
+      <h2>SMM'de KDV ve stopaj birlikte nasıl hesaplanır?</h2>
+      <p>Serbest meslek makbuzunda (SMM, elektronik hâliyle e-SMM) stopaj ve KDV aynı brüt tutar üzerinden hesaplanır; biri diğerinin üzerine eklenmez. Brüt 10.000 TL için stopaj 2.000 TL, KDV 2.000 TL olur. Karşı taraf brütten stopajı düşüp KDV'yi ekleyerek öder: 10.000 − 2.000 + 2.000 = 10.000 TL. KDV'yi stopaj düşülmüş net tutar üzerinden hesaplamak sık yapılan bir hatadır. Bazı hizmet türlerinde KDV'nin bir kısmını alıcı kendisi beyan eder (KDV tevkifatı); bu durumda tahsil edeceğiniz tutar değişir ve bu hesaplayıcı tevkifatı kapsamaz, mali müşavirinize danışın.</p>
+
 
       <h2>Stopaj her zaman kesilir mi?</h2>
       <p>Hayır. Stopajı, vergi kesintisi yapmakla yükümlü olan şirketler ve kurumlar keser. Bireysel bir müşteriye kestiğiniz makbuzda genellikle stopaj olmaz; bu durumda stopaj kutusunun işaretini kaldırın.</p>
