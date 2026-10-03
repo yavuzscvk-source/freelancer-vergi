@@ -3,10 +3,11 @@ import Hesaplayici from "./Hesaplayici";
 import { sayfa } from "../../lib/seo";
 import Kaynaklar from "../Kaynaklar";
 export const metadata = sayfa({
-  baslik: "Şahıs Şirketi mi Limited mi? Vergi Karşılaştırma 2026",
-  aciklama: "Yıllık kârınıza göre şahıs şirketi ve limited şirketin toplam vergi yükünü karşılaştırın. 2026 gelir vergisi dilimleri, %25 kurumlar vergisi ve %15 kâr payı stopajı.",
+  baslik: "Şahıs Şirketi mi Limited mi? Limited Şirket Vergi Oranı 2026",
+  aciklama: "Yıllık kârınıza göre şahıs şirketi ve limited şirketin vergisini karşılaştırın. Limited şirket vergi oranı (%25 kurumlar vergisi), %15 kâr payı stopajı ve 2026 gelir vergisi dilimleri.",
   yol: "/sahis-mi-limited-mi",
 });
+
 
 
 
