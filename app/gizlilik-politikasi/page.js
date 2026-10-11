@@ -7,13 +7,11 @@ export const metadata = sayfa({
   yol: "/gizlilik-politikasi",
 });
 
-
-
 export default function Gizlilik() {
   return (
     <>
       <h1>Gizlilik Politikası</h1>
-      <p className="muted">Son güncelleme: Eylül 2026</p>
+      <p className="muted">Son güncelleme: Ekim 2026</p>
 
       <h2>Hesaplamalarda girdiğiniz bilgiler</h2>
       <p>Hesaplama araçlarına girdiğiniz tutarlar yalnızca kendi tarayıcınızda işlenir. Bu bilgiler sunucularımıza gönderilmez ve saklanmaz.</p>
@@ -25,7 +23,7 @@ export default function Gizlilik() {
       <p>Site Vercel altyapısında barındırılmaktadır. Güvenlik ve hizmetin çalışması için IP adresi ve tarayıcı bilgisi gibi teknik kayıtlar sınırlı süreyle tutulabilir.</p>
 
       <h2>Çerezler ve reklamlar</h2>
-      <p>Şu anda sitede reklam veya takip amaçlı çerez kullanılmamaktadır. İleride reklam gösterilmeye başlanırsa bu politika güncellenecek ve gerekli bilgilendirme yapılacaktır.</p>
+      <p>Sitede Google AdSense ile reklam gösterilmektedir. Google ve reklam iş ortakları, reklamları göstermek, kişiselleştirmek ve ölçmek için çerez ve benzeri teknolojiler kullanabilir; bu kapsamda IP adresi, tarayıcı ve cihaz bilgisi gibi veriler işlenebilir. Bu veriler Google tarafından kendi <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener noreferrer">gizlilik politikasına</a> göre işlenir. Ayrıntılar için <Link href="/cerez-politikasi">çerez politikası</Link> sayfasına bakabilirsiniz.</p>
 
       <h2>E-posta ile iletişim</h2>
       <p>Bize e-posta gönderirseniz, adresiniz ve mesajınız yalnızca size cevap vermek için kullanılır ve üçüncü kişilerle paylaşılmaz.</p>
