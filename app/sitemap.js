@@ -1,4 +1,5 @@
 import { SITE_URL } from "../lib/site";
+import { VERGI } from "../lib/vergi";
 
 const YOLLAR = [
   "",
@@ -42,6 +43,7 @@ const YOLLAR = [
 export default function sitemap() {
   return YOLLAR.map((yol) => ({
     url: `${SITE_URL}${yol}`,
-    lastModified: new Date(),
+    // Her derlemede değişen tarih yerine verilerin son güncellendiği gün
+    lastModified: VERGI.sonGuncellemeTarihi,
   }));
 }

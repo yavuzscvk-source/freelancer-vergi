@@ -8,6 +8,7 @@ Türkiye'deki freelancer'lar için Next.js (app router) vergi hesaplayıcı ve r
 - `lib/reklam.js`: `ADSENSE_ID` (aktif), `GOOGLE_ADS_ID` (boş, kampanya kapalı), `ORTAKLAR` (affiliate, şimdilik boş). `public/ads.txt` AdSense için.
 
 ## Durum (son güncelleme: 13 Ekim 2026)
+- 13 Ekim: ana sayfaya WebSite/Organization şeması ve hisse-beyan linki; sitemap tarihi `VERGI.sonGuncellemeTarihi`'ne bağlandı. Araç/rehber şemaları (WebApplication/Article + Breadcrumb) `Kaynaklar.js` içinde üretiliyor; yeni sayfa `ARACLAR`/`REHBERLER`/`KAYNAKLAR` haritalarına eklenmeli.
 - 11 Ekim: AdSense eklendi.
 - 3–7 Ekim: KDV rehberi eklendi, sitemap düzenlendi, `sahis-sirketi-maliyet` → `sahis-sirketi-maliyeti` olarak taşındı.
 

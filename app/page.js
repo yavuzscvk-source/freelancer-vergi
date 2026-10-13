@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { sayfa } from "../lib/seo";
+import { SITE_URL } from "../lib/site";
 
 export const metadata = sayfa({
   baslik: "Freelancer Vergi Hesaplama Araçları 2026",
@@ -7,6 +8,14 @@ export const metadata = sayfa({
   yol: "/",
   mutlak: true,
 });
+
+const SITE_SEMASI = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", name: "Freelancer Vergi", url: SITE_URL, inLanguage: "tr-TR" },
+    { "@type": "Organization", name: "Freelancer Vergi", url: SITE_URL, email: "freelancervergi@gmail.com" },
+  ],
+};
 
 const ARACLAR = [
   { href: "/serbest-meslek-makbuzu", baslik: "Serbest meslek makbuzu hesaplama", aciklama: "Brüt veya net tutardan stopaj, KDV ve tahsil edilecek tutar." },
@@ -36,6 +45,10 @@ const ARACLAR = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_SEMASI) }}
+      />
       <h1>Freelancer vergi hesaplama araçları</h1>
       <p className="lead">Serbest çalışanlar için 2026 oranlarıyla, sade ve ücretsiz hesaplayıcılar. Makbuzunuzu kesmeden önce elinize ne geçeceğini görün.</p>
 
@@ -61,6 +74,7 @@ export default function Home() {
       </ul>
       <p><Link href="/hesaplayicilar">Tüm hesaplama araçlarını görün</Link></p>
       <p><Link href="/rehber">Vergi rehberindeki soru-cevap yazılarına bakın</Link></p>
+      <p>Yurt dışı hisse senedi kazancınız da varsa: <a href="https://hisse-beyan.vercel.app/" rel="noopener">yurt dışı hisse vergisi hesaplama (IBKR)</a></p>
 
     </>
   );
