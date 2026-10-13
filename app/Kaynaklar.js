@@ -35,6 +35,10 @@ const REHBERLER = {
   rehberGider: { href: "/rehber/hangi-giderler-yazilabilir", ad: "Freelancer hangi harcamaları gider yazabilir?" },
   rehberKdv: { href: "/rehber/hesaplanan-kdv-indirilecek-kdv", ad: "Hesaplanan KDV, indirilecek KDV ve ödenecek KDV nedir?" },
   rehberEsmm: { href: "/rehber/e-smm-nasil-kesilir", ad: "e-Serbest meslek makbuzu nasıl kesilir?" },
+  rehberBagkur: { href: "/rehber/bag-kur-primi-2026", ad: "Bağ-Kur primi 2026: freelancer ne kadar öder?" },
+  rehberTakvim: { href: "/rehber/vergi-takvimi-2027", ad: "Freelancer vergi takvimi 2027" },
+  rehberStopaj: { href: "/rehber/stopaj-iadesi", ad: "Stopaj iadesi nasıl alınır?" },
+  rehberKdvIstisna: { href: "/rehber/hizmet-ihracati-kdv-istisnasi", ad: "Yurt dışına hizmette KDV istisnası" },
 
 };
 
@@ -74,6 +78,10 @@ const KAYNAKLAR = {
   rehberGider: [GVK, MEVZUAT, GIB],
   rehberKdv: [KDVTEB, GIB],
   rehberEsmm: [GVK, GIB],
+  rehberBagkur: [SGK, MEVZUAT],
+  rehberTakvim: [GIB, GVK],
+  rehberStopaj: [GVK, GIB],
+  rehberKdvIstisna: [KDVTEB, GIB],
   doviz: [KDVTEB, GIB],
 
 };

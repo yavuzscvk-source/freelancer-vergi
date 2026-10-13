@@ -19,6 +19,10 @@ const YAZILAR = [
   { href: "/rehber/fiverr-2000-dolar-vergi", ad: "Fiverr'dan ayda 2.000 dolar kazanırsam ne kadar vergi öderim?", not: "%20 komisyon sonrası adım adım hesap." },
   { href: "/rehber/youtube-1-milyon-tl-vergi", ad: "YouTube'dan yılda 1,2 milyon TL kazanırsam?", not: "İçerik üreticiliği istisnası ve sınır aşılırsa ne olur?" },
   { href: "/rehber/yurt-ici-musteri-100-bin-tl", ad: "Yurt içi müşteriye 100.000 TL'lik iş yaptım, elime ne geçer?", not: "Stopaj, KDV ve yıl sonu mahsubu." },
+  { href: "/rehber/bag-kur-primi-2026", ad: "Bağ-Kur primi 2026: freelancer ne kadar öder?", not: "En düşük prim, 5 puan indirim ve ödeme günü." },
+  { href: "/rehber/vergi-takvimi-2027", ad: "Freelancer vergi takvimi 2027", not: "Beyanname, geçici vergi, KDV ve Bağ-Kur tarihleri." },
+  { href: "/rehber/stopaj-iadesi", ad: "Stopaj iadesi nasıl alınır?", not: "Fazla kesilen stopajın mahsubu ve nakden iadesi." },
+  { href: "/rehber/hizmet-ihracati-kdv-istisnasi", ad: "Yurt dışına hizmette KDV istisnası", not: "11/1-a şartları, fatura ve beyanname." },
   { href: "/rehber/hangi-giderler-yazilabilir", ad: "Freelancer hangi harcamaları gider yazabilir?", not: "Gider yazma kuralları ve belgelendirme." },
 ];
 
