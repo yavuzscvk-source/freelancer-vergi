@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { VERGI } from "../lib/vergi";
 import { SITE_URL } from "../lib/site";
-import { ReklamAlani, Ortaklar } from "./Reklam";
+import { ReklamAlani, Ortaklar, MusavirKutusu } from "./Reklam";
 
 const ARACLAR = {
   makbuz: { href: "/serbest-meslek-makbuzu", ad: "Serbest meslek makbuzu hesaplama" },
@@ -19,6 +19,7 @@ const ARACLAR = {
   instagram: { href: "/instagram-vergi-hesaplama", ad: "Instagram, TikTok ve Kick vergisi" },
   tevkifat: { href: "/kdv-tevkifati-hesaplama", ad: "KDV tevkifatı hesaplama" },
   doviz: { href: "/doviz-fatura-tl-karsiligi", ad: "Döviz faturası TL karşılığı" },
+  kira: { href: "/kira-geliri-vergisi-hesaplama", ad: "Kira geliri vergisi hesaplama 2026" },
 
 };
 
@@ -83,6 +84,7 @@ const KAYNAKLAR = {
   rehberStopaj: [GVK, GIB],
   rehberKdvIstisna: [KDVTEB, GIB],
   doviz: [KDVTEB, GIB],
+  kira: [GVK, MEVZUAT, TARIFE],
 
 };
 
@@ -147,6 +149,7 @@ export default function Kaynaklar({ sayfa }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(veri) }}
         />
       )}
+      <MusavirKutusu />
       <ReklamAlani />
       <h2>Bunlar da işinize yarayabilir</h2>
       <ul className="tools">

@@ -58,7 +58,7 @@ p { margin: 0 0 14px; }
 
 label { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
 
-input[type="text"], input[type="date"] {
+input[type="text"], input[type="date"], select {
   width: 100%;
   font: inherit;
   font-size: 1.15rem;
@@ -71,7 +71,7 @@ input[type="text"], input[type="date"] {
   color: var(--ink);
 }
 
-input[type="text"]:focus, input[type="date"]:focus {
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
   border-color: var(--link);
   outline: none;
   box-shadow: 0 0 0 3px rgba(31, 79, 163, 0.2);

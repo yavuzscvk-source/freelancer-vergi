@@ -35,6 +35,7 @@ const GRUPLAR = [
       { href: "/sahis-mi-limited-mi", ad: "Şahıs şirketi mi limited mi?", not: "İki şirket türünün vergi yükü." },
       { href: "/sahis-sirketi-maliyeti", ad: "Şahıs şirketi aylık maliyeti", not: "Bağ-Kur, müşavir ve sabit giderler." },
       { href: "/genc-girisimci-istisnasi", ad: "Genç girişimci istisnası", not: "400.000 TL istisna ve avantajınız." },
+      { href: "/kira-geliri-vergisi-hesaplama", ad: "Kira geliri vergisi", not: "58.000 TL istisna, götürü gider ve freelancer durumu." },
     ],
   },
   {

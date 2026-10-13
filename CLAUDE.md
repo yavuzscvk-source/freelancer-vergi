@@ -9,6 +9,7 @@ Türkiye'deki freelancer'lar için Next.js (app router) vergi hesaplayıcı ve r
 
 ## Durum (son güncelleme: 13 Ekim 2026)
 - 13 Ekim: 4 yeni rehber: Bağ-Kur primi 2026, vergi takvimi 2027, stopaj iadesi, hizmet ihracatı KDV istisnası. Takvim sayfasındaki tarihler (bayram/hafta sonu kaymaları) yıl değişince elle güncellenmeli.
+- 13 Ekim (2): `kira-geliri-vergisi-hesaplama` (VERGI.kira: 58.000 TL istisna, %15 götürü gider) ve `mali-musavir-destegi` (mailto ile başvuru formu; `MusavirKutusu` tüm araç sayfalarında). Gelen başvurular freelancervergi@gmail.com'a düşer; anlaşmalı mali müşavir bulunması kullanıcıda.
 - 13 Ekim: ana sayfaya WebSite/Organization şeması ve hisse-beyan linki; sitemap tarihi `VERGI.sonGuncellemeTarihi`'ne bağlandı. Araç/rehber şemaları (WebApplication/Article + Breadcrumb) `Kaynaklar.js` içinde üretiliyor; yeni sayfa `ARACLAR`/`REHBERLER`/`KAYNAKLAR` haritalarına eklenmeli.
 - 11 Ekim: AdSense eklendi.
 - 3–7 Ekim: KDV rehberi eklendi, sitemap düzenlendi, `sahis-sirketi-maliyet` → `sahis-sirketi-maliyeti` olarak taşındı.

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ADSENSE_ID, ORTAKLAR } from "../lib/reklam";
 
 export function ReklamAlani() {
@@ -33,6 +34,19 @@ export function Ortaklar() {
         Bu bağlantılar üzerinden yapılan üyeliklerden komisyon kazanabiliriz. Bu durum sizin için
         ek maliyet oluşturmaz ve içeriklerimizdeki değerlendirmeleri etkilemez.
       </p>
+    </div>
+  );
+}
+
+export function MusavirKutusu() {
+  return (
+    <div className="card">
+      <strong>Mali müşavir mi arıyorsunuz?</strong>
+      <p style={{ margin: "6px 0 0" }}>
+        Şahıs şirketi kuruluşu, yıllık beyanname veya yurt dışı gelir için freelancer'larla çalışan
+        mali müşavirlerden ücretsiz teklif alın.
+      </p>
+      <Link href="/mali-musavir-destegi" className="btn">Teklif al</Link>
     </div>
   );
 }
