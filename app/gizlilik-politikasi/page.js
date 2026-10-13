@@ -26,7 +26,7 @@ export default function Gizlilik() {
       <p>Sitede Google AdSense ile reklam gösterilmektedir. Google ve reklam iş ortakları, reklamları göstermek, kişiselleştirmek ve ölçmek için çerez ve benzeri teknolojiler kullanabilir; bu kapsamda IP adresi, tarayıcı ve cihaz bilgisi gibi veriler işlenebilir. Bu veriler Google tarafından kendi <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener noreferrer">gizlilik politikasına</a> göre işlenir. Ayrıntılar için <Link href="/cerez-politikasi">çerez politikası</Link> sayfasına bakabilirsiniz.</p>
 
       <h2>E-posta ile iletişim</h2>
-      <p>Bize e-posta gönderirseniz, adresiniz ve mesajınız yalnızca size cevap vermek için kullanılır ve üçüncü kişilerle paylaşılmaz. Tek istisna, <Link href="/mali-musavir-destegi">mali müşavir talebi</Link> gönderdiğinizde açık onayınızla bilgilerinizin size teklif vermesi için en fazla 2 mali müşavirle paylaşılmasıdır.</p>
+      <p>Bize e-posta gönderirseniz, adresiniz ve mesajınız yalnızca size cevap vermek için kullanılır ve üçüncü kişilerle paylaşılmaz.</p>
 
       <h2>Haklarınız</h2>
       <p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamındaki talepleriniz için <a href="mailto:freelancervergi@gmail.com">freelancervergi@gmail.com</a> adresine yazabilirsiniz. Diğer konular için <Link href="/iletisim">iletişim</Link> sayfasını kullanabilirsiniz.</p>

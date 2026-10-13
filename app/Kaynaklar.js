@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { VERGI } from "../lib/vergi";
 import { SITE_URL } from "../lib/site";
-import { ReklamAlani, Ortaklar, MusavirKutusu } from "./Reklam";
+import { ReklamAlani, Ortaklar } from "./Reklam";
 
 const ARACLAR = {
   makbuz: { href: "/serbest-meslek-makbuzu", ad: "Serbest meslek makbuzu hesaplama" },
@@ -149,7 +149,6 @@ export default function Kaynaklar({ sayfa }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(veri) }}
         />
       )}
-      <MusavirKutusu />
       <ReklamAlani />
       <h2>Bunlar da işinize yarayabilir</h2>
       <ul className="tools">

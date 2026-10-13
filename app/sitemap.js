@@ -20,7 +20,6 @@ const YOLLAR = [
   "/youtube-vergi-hesaplama",
   "/instagram-vergi-hesaplama",
   "/kira-geliri-vergisi-hesaplama",
-  "/mali-musavir-destegi",
   "/rehber",
   "/rehber/freelancer-vergi-oder-mi",
   "/rehber/fatura-mi-makbuz-mu",
